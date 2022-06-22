@@ -1,13 +1,13 @@
-@prefix : <https://open-manufacturing.org/ontologies/I4.0/param/> .
+@prefix : <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/param/> .
+@base <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
 
-<https://open-manufacturing.org/ontologies/I4.0/param> rdf:type owl:Ontology ;
+<https://open-manufacturing.org/ontologies/I4.0/Parameter> rdf:type owl:Ontology ;
                                                                 dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                                 dc:created "April 27th, 2022"@en ;
                                                                 dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
@@ -26,7 +26,7 @@
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/hasParameter
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
               rdfs:domain :ParameterSpecification ;
               rdfs:range :Parameter ;
@@ -35,7 +35,7 @@
                          "has parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/hasUnit
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit
 :hasUnit rdf:type owl:ObjectProperty ;
          rdfs:domain :Parameter ;
          rdfs:range <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> ;
@@ -44,7 +44,7 @@
                     "has unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/isValueOf
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf
 :isValueOf rdf:type owl:ObjectProperty ;
            rdfs:domain :ParameterValue ;
            rdfs:range :Parameter ;
@@ -57,7 +57,7 @@
 #    Data properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/paramDataType
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType
 :paramDataType rdf:type owl:DatatypeProperty ;
                rdfs:domain :Parameter ;
                rdfs:comment "Defines the data type of a parameter. Valid ranges are all xsd data types"@en ;
@@ -65,7 +65,7 @@
                           "param datatype"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/paramMaxTolerance
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance
 :paramMaxTolerance rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Parameter ;
                    rdfs:comment "Defines the upper tolerance limit of a parameter."@en ;
@@ -73,7 +73,7 @@
                               "parameter max tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/paramMinTolerance
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance
 :paramMinTolerance rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Parameter ;
                    rdfs:comment "Defines the lower tolerance limit of a parameter."@en ;
@@ -81,7 +81,7 @@
                               "parameter min tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/paramValue
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue
 :paramValue rdf:type owl:DatatypeProperty ;
             rdfs:domain :ParameterValue ;
             rdfs:comment "Defines the value of a parameter."@en ;
@@ -97,7 +97,7 @@
 <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> rdf:type owl:Class .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/Parameter
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter
 :Parameter rdf:type owl:Class ;
            rdfs:subClassOf owl:Thing ;
            rdfs:comment "An individually measured item or property of a process segment or product segment. Parameters belong to a Parameter Specification."@en ;
@@ -105,7 +105,7 @@
                       "Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/ParameterSpecification
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification
 :ParameterSpecification rdf:type owl:Class ;
                         rdfs:subClassOf owl:Thing ;
                         rdfs:comment "Specifies the setting parameters and/or result parameters for a process segment or product segment. A parameter specification consists of 1..n parameters."@en ;
@@ -113,7 +113,7 @@
                                    "Parameter Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/ParameterValue
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue
 :ParameterValue rdf:type owl:Class ;
                 rdfs:subClassOf owl:Thing ;
                 rdfs:comment """Concrete value of a parameter.
@@ -122,7 +122,7 @@ Note 1: For example, the parameter value of the parameter “Temperature” migh
                            "Parameter Value"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/ResultParameter
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter
 :ResultParameter rdf:type owl:Class ;
                  rdfs:subClassOf :Parameter ;
                  rdfs:comment "Description of the result parameters of a given process or product segment. Result parameters can also contain tolerance values. Subclass of Parameter"@en ;
@@ -130,7 +130,7 @@ Note 1: For example, the parameter value of the parameter “Temperature” migh
                             "Result Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/param/SettingParameter
+###  https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter
 :SettingParameter rdf:type owl:Class ;
                   rdfs:subClassOf :Parameter ;
                   rdfs:comment """Description of input / setting parameters of a given process or product segment. Subclass of Parameter.
