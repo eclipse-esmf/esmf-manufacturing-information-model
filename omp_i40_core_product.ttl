@@ -1,14 +1,14 @@
-@prefix : <https://open-manufacturing.org/ontologies/I4.0/product/> .
+@prefix : <https://open-manufacturing.org/ontologies/I4.0/Product/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/product/> .
+@base <https://open-manufacturing.org/ontologies/I4.0/Product/> .
 
 
-<https://open-manufacturing.org/ontologies/I4.0/product> rdf:type owl:Ontology ;
+<https://open-manufacturing.org/ontologies/I4.0/Product> rdf:type owl:Ontology ;
                                                                 dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                                 dc:created "April 27th, 2022"@en ;
                                                                 dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
@@ -27,21 +27,21 @@
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/assembledFromMaterial
+###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial
 :assembledFromMaterial rdf:type owl:ObjectProperty ;
                        rdfs:domain :Material ;
                        rdfs:range :Material ;
                        rdfs:label "assembled from material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/assembledFromProcessedPart
+###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart
 :assembledFromProcessedPart rdf:type owl:ObjectProperty ;
                             rdfs:domain :ProcessedPart ;
                             rdfs:range :ProcessedPart ;
                             rdfs:label "assembled from processed part" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/relatesToMaterial
+###  https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial
 :relatesToMaterial rdf:type owl:ObjectProperty ;
                    rdfs:domain :ProcessedPart ;
                    rdfs:range :Material ;
@@ -52,7 +52,7 @@
 #    Classes
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/Assembly
+###  https://open-manufacturing.org/ontologies/I4.0/Product/Assembly
 :Assembly rdf:type owl:Class ;
           rdfs:subClassOf :SemiFinishedProduct ;
           rdfs:comment """Description of a tangible good that is the outcome of a previous assembly process. Subclass of material. This includes especially the outcomes of other internal suppliers (e.g., plant A delivering an assembly to plant B). 
@@ -60,7 +60,7 @@ Note 1: It is a perspective of the one who uses it to build a more complex mater
           rdfs:label "Assembly" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/Component
+###  https://open-manufacturing.org/ontologies/I4.0/Product/Component
 :Component rdf:type owl:Class ;
            rdfs:subClassOf :SemiFinishedProduct ;
            rdfs:comment """Description of a tangible good that is input to an assembly process and is typically purchased from a supplier in a “ready for use” form. Subclass of material.
@@ -69,7 +69,7 @@ Note 2: It is a perspective of the one who uses it to build a more complex mater
            rdfs:label "Component" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/Material
+###  https://open-manufacturing.org/ontologies/I4.0/Product/Material
 :Material rdf:type owl:Class ;
           rdfs:comment """Abstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. 
 Note 1: The term has been purposely selected to create an umbrella for a broad spectrum of possible examples, anAbstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. 
@@ -77,13 +77,13 @@ Note 2: Subclasses like product, semi-finished product and raw material allow fo
           rdfs:label "Material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/ProcessedPart
+###  https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart
 :ProcessedPart rdf:type owl:Class ;
                rdfs:comment "Description of a unique example/occurrence of a specific material. As such it can be an instantiation of any of the material subclasses. A processed part refers to material it represents via the “relatesToMaterial” relationship." ;
                rdfs:label "Processed Part" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/Product
+###  https://open-manufacturing.org/ontologies/I4.0/Product/Product
 :Product rdf:type owl:Class ;
          rdfs:subClassOf :Material ;
          rdfs:comment """Description of a tangible good that is manufactured or assembled and considered ready for being sold to a customer afterwards. Subclass of material.
@@ -91,14 +91,14 @@ Note 1: Product is a perspective of the one who makes it ready for selling.""" ;
          rdfs:label "Product" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/ProductInstance
+###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance
 :ProductInstance rdf:type owl:Class ;
                  rdfs:subClassOf :ProcessedPart ;
                  rdfs:comment "Concrete and unique example/occurrence of a product (definition) which is the outcome of manufacturing or assembly. A Product Instance refers to its product (definition) via the “relatesToMaterial” relationship inherited from ProcessedPart." ;
                  rdfs:label "Product Instance" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/RawMaterial
+###  https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial
 :RawMaterial rdf:type owl:Class ;
              rdfs:subClassOf :Material ;
              rdfs:comment """Description of a tangible substrate of a specific manufacturing process that is taken in its basic form as input for subsequent manufacturing. It shall not generally be used in the context of tangible input into assembly process. Subclass of material.
@@ -106,7 +106,7 @@ Note 1: Product is a perspective of the one who makes it ready for selling.""" ;
              rdfs:label "Raw Material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/product/SemiFinishedProduct
+###  https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct
 :SemiFinishedProduct rdf:type owl:Class ;
                      rdfs:subClassOf :Material ;
                      rdfs:comment """Description of a tangible good that is not yet finished. Subclass of material.
