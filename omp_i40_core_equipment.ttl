@@ -1,0 +1,180 @@
+@prefix : <https://open-manufacturing.org/ontologies/I4.0/equipment/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@base <https://open-manufacturing.org/ontologies/I4.0/equipment/> .
+
+<https://open-manufacturing.org/ontologies/I4.0/equipment> rdf:type owl:Ontology ;
+                                                                dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
+                                                                dc:created "April 27th, 2022"@en ;
+                                                                dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
+                                                                                                          "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+                                                                                                          "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+                                                                                                          "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+                                                                                                          "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+                                                                                                          "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+                                                                dc:modified "June 22nd, 2022"@en ;
+                                                                dc:title "OMP I4.0 Core Information Model - Equipment Ontology"@en ;
+                                                                rdfs:comment "This ontology models concepts and relationships to organize assets according to logical principles"@en ;
+                                                                rdfs:label "OMP I4.0 Core Information Model - Equipment Ontology"@en ;
+                                                                owl:versionInfo "1.0"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/belongsToLine
+:belongsToLine rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Station ;
+               rdfs:range :Line ;
+               rdfs:label "belongs to line"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/belongsToPlant
+:belongsToPlant rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :WorkCenter ;
+                rdfs:range :Plant ;
+                rdfs:label "belongs to plant"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/belongsToStation
+:belongsToStation rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :WorkCell ;
+                  rdfs:range :Station ;
+                  rdfs:label "belongs to station"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/belongsToWorkCenter
+:belongsToWorkCenter rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :WorkUnit ;
+                     rdfs:range :WorkCenter ;
+                     rdfs:label "belongs to work center"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/consistsOfStation
+:consistsOfStation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :Line ;
+                   rdfs:range :Station ;
+                   rdfs:label "consists of station"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/consistsOfWorkCell
+:consistsOfWorkCell rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :Station ;
+                    rdfs:range :WorkCell ;
+                    rdfs:label "consists of work cell"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/consistsOfWorkCenter
+:consistsOfWorkCenter rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :Plant ;
+                      rdfs:range :WorkCenter ;
+                      rdfs:label "consists of work center"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/consistsOfWorkUnit
+:consistsOfWorkUnit rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :WorkCenter ;
+                    rdfs:range :WorkUnit ;
+                    rdfs:label "consists of work unit"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/madeUpOfWorkUnit
+:madeUpOfWorkUnit rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :WorkUnit ;
+                  rdfs:range :WorkUnit ;
+                  rdfs:label "made up of work unit"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/Equipment
+:Equipment rdf:type owl:Class ;
+           rdfs:comment """Generalization for all logical elements required to organize or model your manufacturing hierarchy, sequence or flow.
+
+Note 1: The formal UML role-based equipment model object is used to define the role-based equipment hierarchy information that is defined in IEC 62264-1.
+
+Note 2: The model contains the information that may be used to construct the hierarchical models used in manufacturing scenarios.
+
+Reference: IEC 62264-1, IEC 62264-2"""@en ;
+           rdfs:label "equipment"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/Line
+:Line rdf:type owl:Class ;
+      rdfs:subClassOf :WorkCenter ;
+      rdfs:comment """Collection of one or more sequentially ordered work units that work together to perform a defined sequence of production processes to manufacture or assemble a product that can be a final or a semi-finished product. 
+A line is a subclass of a work center."""@en ;
+      rdfs:label "Line"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/Plant
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :Equipment ;
+       rdfs:comment "Complex and separate organizational structure set up. It is a logical grouping of a manufacturing entity. It contains other equipment such as work centers or work units. Plants may be part of business-oriented entities such as product lines, divisions, sales segments and so on."@en ;
+       rdfs:label "Plant"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/Pool
+:Pool rdf:type owl:Class ;
+      rdfs:subClassOf :WorkCenter ;
+      rdfs:comment """Grouping of several parallel work units running the same process or sharing similar capabilities. 
+A pool is a subclass of a work center."""@en ;
+      rdfs:label "Pool"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/Station
+:Station rdf:type owl:Class ;
+         rdfs:subClassOf :WorkUnit ;
+         rdfs:comment """A logical grouping of equipment intended to produce a good. Stations are often are linked to a manufacturing process for a semi-finished or finished part. Subclass of a work unit. Stations belong to a line. A line can consist of 1..n stations.
+
+One or more process segments may be linked to a station. 
+
+Note 1: Assets or parts within an Asset represent a station well. Station can be linked to assets via the “isImplementedBy” relationship"""@en ;
+         rdfs:label "Station"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/WorkCell
+:WorkCell rdf:type owl:Class ;
+          rdfs:subClassOf :WorkUnit ;
+          rdfs:comment """Logical sub groupings of stations. A station can consist of 1..n work cells. Subclass of a work unit.
+
+Work cells are intended to implement a process segment. Usually, the mapping between process segment and work cell is a 1:1 mapping."""@en ;
+          rdfs:label "Work Cell"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/WorkCenter
+:WorkCenter rdf:type owl:Class ;
+            rdfs:subClassOf :Equipment ;
+            rdfs:comment """Grouping of one or more work units or smaller work centers that are logically or geographically linked. Line and Pool are sub-classes of work centers. A work centers can consist of 1..n work centers (e.g., a pool is part of a line). 
+This term does not refer to SAP work center. It is possible but not recommended to represent an asset as a work center."""@en ;
+            rdfs:label "Work Center"@en .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/equipment/WorkUnit
+:WorkUnit rdf:type owl:Class ;
+          rdfs:subClassOf :Equipment ;
+          rdfs:comment """Logical grouping of equipment at the level below a work center. A work unit can consist of smaller work units. A work unit logically represents the location of executing a manufacturing process and can be linked to a machine or machine component which physically executes the manufacturing process.
+
+It performs production, storage, material movement, or any other Level three or level four scheduled activity according to the manufacturing operations and control systems hierarchy.
+
+Reference: IEC 62264-1 ID:3.1.26"""@en ;
+          rdfs:label "Work Unit"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
