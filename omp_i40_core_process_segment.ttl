@@ -1,0 +1,89 @@
+@prefix : <https://open-manufacturing.org/ontologies/I4.0/processsegment/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://open-manufacturing.org/ontologies/I4.0/processsegment> .
+
+<https://open-manufacturing.org/ontologies/I4.0/processsegment> rdf:type owl:Ontology ;
+                                                                 <http://purl.org/dc/elements/1.1/contributor> "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
+                                                                 <http://purl.org/dc/elements/1.1/created> "June 15th, 2022"@en ;
+                                                                 <http://purl.org/dc/elements/1.1/creator> "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
+                                                                                                           "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+                                                                                                           "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+                                                                                                           "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+                                                                                                           "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+                                                                                                           "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+                                                                 <http://purl.org/dc/elements/1.1/modified> "June 16th, 2022"@en ;
+                                                                 <http://purl.org/dc/elements/1.1/title> "Process Segment Ontology"@en ;
+                                                                 rdfs:comment "This ontology shows concepts and relationships to organize process segments"@en ;
+                                                                 rdfs:label "Process Segment Ontology"@en ;
+                                                                 owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://open-manufacturing.org/ontologies/I4.0/processsegment/belongsToProcess
+:belongsToProcess rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ProcessSegment ;
+                  rdfs:range :Process ;
+                  rdfs:label "belongs to process"@en ,
+                             "belongs to process"^^xsd:string .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/processsegment/consistsOfProcessSegment
+:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Process ;
+                          rdfs:range :ProcessSegment ;
+                          rdfs:label "consists of process segment"@en ,
+                                     "consists of process segment"^^xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://open-manufacturing.org/ontologies/I4.0/processsegment/Process
+:Process rdf:type owl:Class ;
+         rdfs:comment """Description of a manufacturing process. A manufacturing process may
+consist of 1..n process segments"""^^xsd:string ;
+         rdfs:label "Process"@en ,
+                    "Process"^^xsd:string .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/processsegment/ProcessSegment
+:ProcessSegment rdf:type owl:Class ;
+                rdfs:comment """Smallest elements of manufacturing activities that are visible to
+business processes. Multiple process segments together form a process
+(manufacturing process). Also called business process segment."""@en ;
+                rdfs:label "Process Segment"@en ,
+                           "Process Segment"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
