@@ -20,17 +20,72 @@
                                                                    <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment> ,
                                                                    <https://open-manufacturing.org/ontologies/I4.0/Product> ,
                                                                    <https://open-manufacturing.org/ontologies/I4.0/ProductSegment> ;
-												       dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
-                                                                             "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
-                                                                             "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
-                                                                             "https://www.linkedin.com/in/fabio-massari-b63892/" ,
-                                                                             "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
-                                                                             "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
                                                        dc:created "July 13th, 2022"@en ;
-													   dc:modified "July 18th, 2022"@en ;
+                                                       dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
+                                                                  "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+                                                                  "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+                                                                  "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+                                                                  "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+                                                                  "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+                                                       dc:modified "July 18th, 2022"@en ;
                                                        dc:title "OMP I4.0 Core Information Model - Core Ontology"@en ;
                                                        rdfs:comment "This ontology integrates the sub-ontologies of the OMP I4.0 Core Information Model."@en ;
                                                        rdfs:label "OMP I4.0 Core Information Model - Core Ontology"@en ;
                                                        owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment
+:hasEquipment rdf:type owl:ObjectProperty ;
+              rdfs:domain prod-seg:EquipmentSpecification ;
+              rdfs:range eqm:Equipment ;
+              rdfs:label "has equipment" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial
+:hasMaterial rdf:type owl:ObjectProperty ;
+             rdfs:domain prod-seg:MaterialSpecification ;
+             rdfs:range prod:Material ;
+             rdfs:label "has material" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification
+:hasParameterSpecification rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty ;
+                           rdfs:domain pros-seg:ProcessSegment ,
+                                       prod-seg:ProductSegment ;
+                           rdfs:range param:ParameterSpecification ;
+                           rdfs:label "has parameter specification" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue
+:hasParameterValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain prod-seg:SegmentResult ;
+                   rdfs:range param:ParameterValue ;
+                   rdfs:label "has parameter value" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment
+:implementsProcessSegment rdf:type owl:ObjectProperty ;
+                          rdfs:domain prod-seg:ProductSegment ;
+                          rdfs:range pros-seg:ProcessSegment ;
+                          rdfs:label "implements process segment" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset
+:isImplementedByAsset rdf:type owl:ObjectProperty ;
+                      rdfs:domain eqm:WorkUnit ;
+                      rdfs:range phys:Asset ;
+                      rdfs:label "is implemented by asset" .
+
+
+###  https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment
+:requiresProductSegment rdf:type owl:ObjectProperty ;
+                        rdfs:domain prod:Product ;
+                        rdfs:range prod-seg:ProductSegment ;
+                        rdfs:label "requires product segment" .
+
 
 ###  Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi
