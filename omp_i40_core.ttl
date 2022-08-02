@@ -41,6 +41,7 @@
 :hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:domain prod-seg:EquipmentSpecification ;
               rdfs:range eqm:Equipment ;
+              rdfs:comment "Relationship between \"EquipmentSpecification\" and \"Equipment\""@en ;
               rdfs:label "has equipment" .
 
 
@@ -48,6 +49,7 @@
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain prod-seg:MaterialSpecification ;
              rdfs:range prod:Material ;
+             rdfs:comment "Relationship between \"MaterialSpecification\" and \"Material\""@en ;
              rdfs:label "has material" .
 
 
@@ -57,6 +59,7 @@
                            rdfs:domain pros-seg:ProcessSegment ,
                                        prod-seg:ProductSegment ;
                            rdfs:range param:ParameterSpecification ;
+                           rdfs:comment "Relationship between \"ProcessSegment\" and \"ProductSegment\""@en ;
                            rdfs:label "has parameter specification" .
 
 
@@ -64,6 +67,7 @@
 :hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:domain prod-seg:SegmentResult ;
                    rdfs:range param:ParameterValue ;
+                   rdfs:comment "Relationship between \"SegmentResult\" and \"ParameterValue\""@en ;
                    rdfs:label "has parameter value" .
 
 
@@ -71,6 +75,7 @@
 :implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range pros-seg:ProcessSegment ;
+                          rdfs:comment "Relationship between \"ProductSegment\" and \"ProcessSegment\""@en ;
                           rdfs:label "implements process segment" .
 
 
@@ -78,6 +83,7 @@
 :isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:domain eqm:WorkUnit ;
                       rdfs:range phys:Asset ;
+                      rdfs:comment "Relationship between \"WorkUnit\" and \"Asset\""@en ;
                       rdfs:label "is implemented by asset" .
 
 
@@ -85,6 +91,7 @@
 :requiresProductSegment rdf:type owl:ObjectProperty ;
                         rdfs:domain prod:Product ;
                         rdfs:range prod-seg:ProductSegment ;
+                        rdfs:comment "Relationship between \"Product\" and \"ProductSegment\""@en ;
                         rdfs:label "requires product segment" .
 
 
