@@ -11,3 +11,5 @@ The OMP I4.0 Core Information Model consists of the following sub-models:
 - Parameter Ontology
 - Product Segment Ontology
 - Process Segment Ontology
+
+The file omp-i40-core.ttl imports the sub-models and defines relationships between entities of different submodels.
