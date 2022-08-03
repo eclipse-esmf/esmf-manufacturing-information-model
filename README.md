@@ -1,4 +1,4 @@
-# sds-manufacturing-information-model-private
+# sds-manufacturing-information-model
 This repository is dedicated to OMP Semantic Data Structuring Working Group (OMP SDS).
 It contains the implementation of the OMP I4.0 Core Information Model described in the linked [Whitepaper](https://open-manufacturing.org/wp-content/uploads/sites/101/2022/05/OMP-SDS-Whitepaper_I4.0_Core_Information_Model.pdf)
 
