@@ -13,3 +13,13 @@ The OMP I4.0 Core Information Model consists of the following sub-models:
 - Process Segment Ontology
 
 The file omp-i40-core.ttl imports the sub-models and defines relationships between entities of different submodels. 
+
+Contributors:
+Soufiane Ameziane (Teradata Corp.)
+Irlan Grangel-Gonzalez (Robert Bosch GmbH)
+Piotr Janik (Intel Corp.)
+Marcel Keller (Robert Bosch GmbH)
+Felix Loesch (Robert Bosch GmbH) – Coordinator of Whitepaper I4.0 Core Information Model
+Fabio Massari (VMware Inc.)
+Denis Molin (Teradata Corp.)
+Nico Wilhelm (ZF Friedrichshafen AG)
