@@ -19,7 +19,7 @@ Contributors:
 - Irlan Grangel-Gonzalez (Robert Bosch GmbH)
 - Piotr Janik (Intel Corp.)
 - Marcel Keller (Robert Bosch GmbH)
-- Felix Loesch (Robert Bosch GmbH) – Coordinator of Whitepaper I4.0 Core Information Model
+- Felix Loesch (Robert Bosch GmbH) – Coordinator of OMP I4.0 Core Information Model
 - Fabio Massari (VMware Inc.)
 - Denis Molin (Teradata Corp.)
 - Nico Wilhelm (ZF Friedrichshafen AG)
