@@ -21,9 +21,9 @@ Model provides  model entities needed to implement manufacturing traceability, s
 the product model defining a recursive model of the assembled materials to the product
 segment model defining entities for the description of the result of manufacturing processes and
 individual parts assembly enabling a traceability at both the product definition and product instance level. 
-- Manufacturing Process Quality: The I4.0 Core Information model provides the means to describe process chains, including process
+- Manufacturing Process Quality Monitoring: The I4.0 Core Information model provides the means to describe process chains, including process
 result parameters and their tolerances. This provides the basis for process quality monitoring use
-cases
+cases.
 - Asset Inventory: The I4.0 Core Information Model provides with the physical asset model a good way to implement
 asset inventory use cases in which one needs to know which assets are located in which buildings and
 production lines. 
