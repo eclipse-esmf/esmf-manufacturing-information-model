@@ -120,7 +120,7 @@ Note 1: The formal UML role-based equipment model object is used to define the r
 Note 2: The model contains the information that may be used to construct the hierarchical models used in manufacturing scenarios.
 
 Reference: IEC 62264-1, IEC 62264-2"""@en ;
-           rdfs:label "equipment"@en .
+           rdfs:label "Equipment"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Line
