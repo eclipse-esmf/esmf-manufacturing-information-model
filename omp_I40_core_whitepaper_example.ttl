@@ -410,14 +410,14 @@ param:paramValue rdf:type owl:DatatypeProperty ;
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/hasProductName
-<https://open-manufacturing.org/ontologies/I4.0/Product/Product/hasProductName> rdf:type owl:DatatypeProperty ;
+prod:hasProductName rdf:type owl:DatatypeProperty ;
                                                                                 rdfs:domain prod:Product ;
                                                                                 rdfs:range xsd:string ;
                                                                                 rdfs:label "has Product Name"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/hasRawMaterialtName
-<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/hasRawMaterialtName> rdf:type owl:DatatypeProperty ;
+prod:hasRawMaterialName rdf:type owl:DatatypeProperty ;
                                                                                              rdfs:domain prod:RawMaterial ;
                                                                                              rdfs:range xsd:string ;
                                                                                              rdfs:label "has RawMaterial Name"@en .
@@ -846,7 +846,7 @@ prod-seg:SegmentResult rdf:type owl:Class ;
                                                                                      prod:Product ;
                                                                             prod:assembledFromMaterial <https://open-manufacturing.org/ontologies/I4.0/Product/Product/M8_Insert_nut> ,
                                                                                                        <https://open-manufacturing.org/ontologies/I4.0/Product/Product/Machined_Housing> ;
-                                                                            <https://open-manufacturing.org/ontologies/I4.0/Product/Product/hasProductName> "Transmission Housing"^^xsd:string .
+                                                                            prod:hasProductName "Transmission Housing"^^xsd:string .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/1111222333_4567
@@ -857,7 +857,7 @@ prod-seg:SegmentResult rdf:type owl:Class ;
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789
 <https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789> rdf:type owl:NamedIndividual ,
                                                                                          prod:RawMaterial ;
-                                                                                <https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/hasRawMaterialtName> "Raw Housing"@en .
+                                                                                prod:hasRawMaterialName "Raw Housing"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment/Housing_front_side
