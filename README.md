@@ -1,7 +1,7 @@
 # sds-manufacturing-information-model
 This repository is dedicated to OMP Semantic Data Structuring Working Group (OMP SDS).
 
-It contains the implementation of the OMP I4.0 Core Information Model described in the linked [Whitepaper] (https://open-manufacturing.org/wp-content/uploads/sites/101/2022/05/OMP-SDS-Whitepaper_I4.0_Core_Information_Model.pdf) as a set of modularized ontologies.
+It contains the implementation of the OMP I4.0 Core Information Model described in the linked [Whitepaper](https://open-manufacturing.org/wp-content/uploads/sites/101/2022/05/OMP-SDS-Whitepaper_I4.0_Core_Information_Model.pdf) as a set of modularized ontologies.
 
 The OMP I4.0 Core Information Model provides a common and standardized definition of relevant manufacturing entities, their attributes, and relationships, including their semantic meaning. The Information model is implemented in a set of modularized ontologies. This enables manufacturing enterprises to efficiently integrate data and provide a clear semantic context, thus reducing the time required to generate insights from the data. Furthermore, the OMP I4.0 Core Information Model allows companies to reuse data-processing applications across heterogeneous data sources as the standardized data model acts as an abstraction layer over the heterogeneous data decoupling data sources from data processing applications.
 
