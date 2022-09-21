@@ -5,6 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
 @base <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
 
 <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> rdf:type owl:Ontology ;
@@ -66,39 +67,39 @@ dc:title rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
-:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
-                           rdfs:domain :ProductSegment ;
-                           rdfs:range :EquipmentSpecification ;
-                           rdfs:comment "Relationship between \"ProductSegment\" and \"EquipmentSpecification\""@en ;
-                           rdfs:label "has Equipment Specification" ,
-                                      "has Equipment Specification"@en .
+prod-seg:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
+                                   rdfs:domain prod-seg:ProductSegment ;
+                                   rdfs:range prod-seg:EquipmentSpecification ;
+                                   rdfs:comment "Relationship between \"ProductSegment\" and \"EquipmentSpecification\""@en ;
+                                   rdfs:label "has equipment specification" ,
+                                              "has equipment specification"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification
-:hasMaterialSpecification rdf:type owl:ObjectProperty ;
-                          rdfs:domain :ProductSegment ;
-                          rdfs:range :MaterialSpecification ;
-                          rdfs:comment "Relationship between \"ProductSegment\" and \"MaterialSpecification\""@en ;
-                          rdfs:label "has Material Specification" ,
-                                     "has Material Specification"@en .
+prod-seg:hasMaterialSpecification rdf:type owl:ObjectProperty ;
+                                  rdfs:domain prod-seg:ProductSegment ;
+                                  rdfs:range prod-seg:MaterialSpecification ;
+                                  rdfs:comment "Relationship between \"ProductSegment\" and \"MaterialSpecification\""@en ;
+                                  rdfs:label "has material specification" ,
+                                             "has material specification"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult
-:hasSegmentResult rdf:type owl:ObjectProperty ;
-                  rdfs:domain :ProductSegment ;
-                  rdfs:range :SegmentResult ;
-                  rdfs:comment "Relationship between \"ProductSegment\" and \"SegmentResult\""@en ;
-                  rdfs:label "has Segment Result" ,
-                             "has Segment Result"@en .
+prod-seg:hasSegmentResult rdf:type owl:ObjectProperty ;
+                          rdfs:domain prod-seg:ProductSegment ;
+                          rdfs:range prod-seg:SegmentResult ;
+                          rdfs:comment "Relationship between \"ProductSegment\" and \"SegmentResult\""@en ;
+                          rdfs:label "has segment result" ,
+                                     "has segment result"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy
-:isFollowedBy rdf:type owl:ObjectProperty ;
-              rdfs:domain :ProductSegment ;
-              rdfs:range :ProductSegment ;
-              rdfs:comment "Relationship between \"ProductSegment\" and \"ProductSegment\""@en ;
-              rdfs:label "is Followed By" ,
-                         "is Followed By"@en .
+prod-seg:isFollowedBy rdf:type owl:ObjectProperty ;
+                      rdfs:domain prod-seg:ProductSegment ;
+                      rdfs:range prod-seg:ProductSegment ;
+                      rdfs:comment "Relationship between \"ProductSegment\" and \"ProductSegment\""@en ;
+                      rdfs:label "is followed by" ,
+                                 "is followed by"@en .
 
 
 #################################################################
@@ -106,31 +107,31 @@ dc:title rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification
-:EquipmentSpecification rdf:type owl:Class ;
-                        rdfs:comment "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."@en ;
-                        rdfs:label "Equipment Specification" ,
-                                   "Equipment Specification"@en .
+prod-seg:EquipmentSpecification rdf:type owl:Class ;
+                                rdfs:comment "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."@en ;
+                                rdfs:label "Equipment Specification" ,
+                                           "Equipment Specification"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification
-:MaterialSpecification rdf:type owl:Class ;
-                       rdfs:comment "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."@en ;
-                       rdfs:label "Material Specification" ,
-                                  "Material Specification"@en .
+prod-seg:MaterialSpecification rdf:type owl:Class ;
+                               rdfs:comment "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."@en ;
+                               rdfs:label "Material Specification" ,
+                                          "Material Specification"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment
-:ProductSegment rdf:type owl:Class ;
-                rdfs:comment "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."@en ;
-                rdfs:label "Product Segment" ,
-                           "Product Segment"@en .
+prod-seg:ProductSegment rdf:type owl:Class ;
+                        rdfs:comment "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."@en ;
+                        rdfs:label "Product Segment" ,
+                                   "Product Segment"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult
-:SegmentResult rdf:type owl:Class ;
-               rdfs:comment "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."@en ;
-               rdfs:label "Segment Result" ,
-                          "Segment Result"@en .
+prod-seg:SegmentResult rdf:type owl:Class ;
+                       rdfs:comment "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."@en ;
+                       rdfs:label "Segment Result" ,
+                                  "Segment Result"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
