@@ -1,26 +1,50 @@
-@prefix : <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/> .
+@prefix : <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix phys: <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/> .
+@base <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset> .
 
 <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset> rdf:type owl:Ontology ;
                                                                 dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                                 dc:created "April 27th, 2022"@en ;
                                                                 dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
-                                                                                                          "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
-                                                                                                          "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
-                                                                                                          "https://www.linkedin.com/in/fabio-massari-b63892/" ,
-                                                                                                          "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
-                                                                                                          "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+                                                                           "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+                                                                           "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+                                                                           "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+                                                                           "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+                                                                           "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
                                                                 dc:modified "June 22nd, 2022"@en ;
                                                                 dc:title "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
                                                                 rdfs:comment "This ontology models concepts and relationships to organize assets according to physical principles"@en ;
                                                                 rdfs:label "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
                                                                 owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+dc:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/modified
+dc:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -28,80 +52,80 @@
 #################################################################
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding
-:belongsToBuilding rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Level ;
-                   rdfs:range :Building ;
-                   rdfs:label "belongs to building"@en .
+phys:belongsToBuilding rdf:type owl:ObjectProperty ;
+                       rdfs:domain phys:Level ;
+                       rdfs:range phys:Building ;
+                       rdfs:label "belongs to building"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation
-:belongsToLocation rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Building ;
-                   rdfs:range :Location ;
-                   rdfs:label "belongs to location"@en .
+phys:belongsToLocation rdf:type owl:ObjectProperty ;
+                       rdfs:domain phys:Building ;
+                       rdfs:range phys:Location ;
+                       rdfs:label "belongs to location"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine
-:belongsToMachine rdf:type owl:ObjectProperty ;
-                  rdfs:domain :MachineComponent ;
-                  rdfs:range :Machine ;
-                  rdfs:label "belongs to machine"@en .
+phys:belongsToMachine rdf:type owl:ObjectProperty ;
+                      rdfs:domain phys:MachineComponent ;
+                      rdfs:range phys:Machine ;
+                      rdfs:label "belongs to machine"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding
-:consistsOfBuilding rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Location ;
-                    rdfs:range :Building ;
-                    rdfs:label "consists of building"@en .
+phys:consistsOfBuilding rdf:type owl:ObjectProperty ;
+                        rdfs:domain phys:Location ;
+                        rdfs:range phys:Building ;
+                        rdfs:label "consists of building"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel
-:consistsOfLevel rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Building ;
-                 rdfs:range :Level ;
-                 rdfs:label "consists of level"@en .
+phys:consistsOfLevel rdf:type owl:ObjectProperty ;
+                     rdfs:domain phys:Building ;
+                     rdfs:range phys:Level ;
+                     rdfs:label "consists of level"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent
-:consistsOfMachineComponent rdf:type owl:ObjectProperty ;
-                            rdfs:domain :Machine ;
-                            rdfs:range :MachineComponent ;
-                            rdfs:label "consists of machine component"@en .
+phys:consistsOfMachineComponent rdf:type owl:ObjectProperty ;
+                                rdfs:domain phys:Machine ;
+                                rdfs:range phys:MachineComponent ;
+                                rdfs:label "consists of machine component"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset
-:hasPhysicalAsset rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Building ;
-                  rdfs:range :Asset ;
-                  rdfs:label "has physical asset"@en .
+phys:hasPhysicalAsset rdf:type owl:ObjectProperty ;
+                      rdfs:domain phys:Building ;
+                      rdfs:range phys:Asset ;
+                      rdfs:label "has physical asset"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent
-:isComposedOfMachineComponent rdf:type owl:ObjectProperty ;
-                              rdfs:domain :MachineComponent ;
-                              rdfs:range :MachineComponent ;
-                              rdfs:label "is composed of machine component"@en .
+phys:isComposedOfMachineComponent rdf:type owl:ObjectProperty ;
+                                  rdfs:domain phys:MachineComponent ;
+                                  rdfs:range phys:MachineComponent ;
+                                  rdfs:label "is composed of machine component"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding
-:isLocatedInBuilding rdf:type owl:ObjectProperty ;
-                     rdfs:domain :Asset ;
-                     rdfs:range :Building ;
-                     rdfs:label "is located in building"@en .
+phys:isLocatedInBuilding rdf:type owl:ObjectProperty ;
+                         rdfs:domain phys:Asset ;
+                         rdfs:range phys:Building ;
+                         rdfs:label "is located in building"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent
-:isUsedByMachineComponent rdf:type owl:ObjectProperty ;
-                          rdfs:domain :MachineTool ;
-                          rdfs:range :MachineComponent ;
-                          rdfs:label "is used by machine component"@en .
+phys:isUsedByMachineComponent rdf:type owl:ObjectProperty ;
+                              rdfs:domain phys:MachineTool ;
+                              rdfs:range phys:MachineComponent ;
+                              rdfs:label "is used by machine component"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool
-:usesMachineTool rdf:type owl:ObjectProperty ;
-                 rdfs:domain :MachineComponent ;
-                 rdfs:range :MachineTool ;
-                 rdfs:label "uses machine tool"@en .
+phys:usesMachineTool rdf:type owl:ObjectProperty ;
+                     rdfs:domain phys:MachineComponent ;
+                     rdfs:range phys:MachineTool ;
+                     rdfs:label "uses machine tool"@en .
 
 
 #################################################################
@@ -109,8 +133,8 @@
 #################################################################
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset
-:Asset rdf:type owl:Class ;
-       rdfs:comment """Physical asset that covers primarily machines and tools but excludes buildings.  
+phys:Asset rdf:type owl:Class ;
+           rdfs:comment """Physical asset that covers primarily machines and tools but excludes buildings.  
 
 Note 1: Short form asset used in this document refers to production asset.  
 
@@ -119,48 +143,47 @@ Assets represent an extension point.
 Note 2: You can further subclass assets (e.g. AGVs, …) 
 
 Reference: IEC 62264-1 ID:3.1.36, Industrie 4.0 – Terms, VDI status report Industrie 4.0 (April 2021)"""@en ;
-       rdfs:label "Asset"@en .
+           rdfs:label "Asset"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building
-:Building rdf:type owl:Class ;
-          rdfs:comment "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en ;
-          rdfs:label "Building"@en .
+phys:Building rdf:type owl:Class ;
+              rdfs:comment "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en ;
+              rdfs:label "Building"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level
-:Level rdf:type owl:Class ;
-       rdfs:comment "Sub-structure of a building and is synonym to the word building floor."@en ;
-       rdfs:label "Level"@en .
+phys:Level rdf:type owl:Class ;
+           rdfs:comment "Sub-structure of a building and is synonym to the word building floor."@en ;
+           rdfs:label "Level"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location
-:Location rdf:type owl:Class ;
-          rdfs:comment """Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).
+phys:Location rdf:type owl:Class ;
+              rdfs:comment """Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).
 A spatial region or named place.""" ;
-          rdfs:isDefinedBy "http://purl.org/dc/terms/Location"@en ;
-          rdfs:label "Location"@en .
+              rdfs:isDefinedBy "http://purl.org/dc/terms/Location"@en ;
+              rdfs:label "Location"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine
-:Machine rdf:type owl:Class ;
-         rdfs:subClassOf :Asset ;
-         rdfs:comment "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en ;
-         rdfs:label "Machine"@en .
+phys:Machine rdf:type owl:Class ;
+             rdfs:subClassOf phys:Asset ;
+             rdfs:comment "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en ;
+             rdfs:label "Machine"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent
-:MachineComponent rdf:type owl:Class ;
-                  rdfs:comment "A part of a machine which itself may be composed of sub components."@en ;
-                  rdfs:label "Machine Component"@en .
+phys:MachineComponent rdf:type owl:Class ;
+                      rdfs:comment "A part of a machine which itself may be composed of sub components."@en ;
+                      rdfs:label "Machine Component"@en .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool
-:MachineTool rdf:type owl:Class ;
-             rdfs:comment """A device used in a machine for manufacturing or assembly.  
-
+phys:MachineTool rdf:type owl:Class ;
+                 rdfs:comment """A device used in a machine for manufacturing or assembly.  
 Note 1: For example, a drilling tool is used in a drilling machine to drill holes into the product."""@en ;
-             rdfs:label "Machine Tool"@en .
+                 rdfs:label "Machine Tool"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
