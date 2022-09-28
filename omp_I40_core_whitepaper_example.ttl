@@ -1,4 +1,4 @@
-@prefix : <https://open-manufacturing.org/ontologies/I4.0/Core/> .
+@prefix core: <https://open-manufacturing.org/ontologies/I4.0/Core/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eqm: <https://open-manufacturing.org/ontologies/I4.0/Equipment/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -22,9 +22,9 @@
                                                                   "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
                                                                   "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
                                                        dc:modified "July 18th, 2022"@en ;
-                                                       dc:title "OMP I4.0 Core Information Model - Core Ontology"@en ;
-                                                       rdfs:comment "This ontology integrates the sub-ontologies of the OMP I4.0 Core Information Model."@en ;
-                                                       rdfs:label "OMP I4.0 Core Information Model - Core Ontology"@en ;
+                                                       dc:title "OMP I4.0 Core Information Model - Core Ontology - Example"@en ;
+                                                       rdfs:comment "This ontology integrates the sub-ontologies of the OMP I4.0 Core Information Model and includes instances as an example."@en ;
+                                                       rdfs:label "OMP I4.0 Core Information Model - Core Ontology - Example"@en ;
                                                        owl:versionInfo "1.0"@en .
 
 #################################################################
@@ -52,7 +52,7 @@ dc:title rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment
-:hasEquipment rdf:type owl:ObjectProperty ;
+core:hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:domain prod-seg:EquipmentSpecification ;
               rdfs:range eqm:Equipment ;
               rdfs:comment "Relationship between \"EquipmentSpecification\" and \"Equipment\""@en ;
@@ -60,7 +60,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial
-:hasMaterial rdf:type owl:ObjectProperty ;
+core:hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain prod-seg:MaterialSpecification ;
              rdfs:range prod:Material ;
              rdfs:comment "Relationship between \"MaterialSpecification\" and \"Material\""@en ;
@@ -68,7 +68,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification
-:hasParameterSpecification rdf:type owl:ObjectProperty ;
+core:hasParameterSpecification rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain pros-seg:ProcessSegment ,
                                        prod-seg:ProductSegment ;
@@ -78,7 +78,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue
-:hasParameterValue rdf:type owl:ObjectProperty ;
+core:hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:domain prod-seg:SegmentResult ;
                    rdfs:range param:ParameterValue ;
                    rdfs:comment "Relationship between \"SegmentResult\" and \"ParameterValue\""@en ;
@@ -86,7 +86,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment
-:implementsProcessSegment rdf:type owl:ObjectProperty ;
+core:implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range pros-seg:ProcessSegment ;
                           rdfs:comment "Relationship between \"ProductSegment\" and \"ProcessSegment\""@en ;
@@ -94,7 +94,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset
-:isImplementedByAsset rdf:type owl:ObjectProperty ;
+core:isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:domain eqm:WorkUnit ;
                       rdfs:range phys:Asset ;
                       rdfs:comment "Relationship between \"WorkUnit\" and \"Asset\""@en ;
@@ -102,7 +102,7 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment
-:requiresProductSegment rdf:type owl:ObjectProperty ;
+core:requiresProductSegment rdf:type owl:ObjectProperty ;
                         rdfs:domain prod:Product ;
                         rdfs:range prod-seg:ProductSegment ;
                         rdfs:comment "Relationship between \"Product\" and \"ProductSegment\""@en ;
