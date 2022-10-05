@@ -5,6 +5,9 @@ It contains the implementation of the OMP I4.0 Core Information Model described 
 
 The OMP I4.0 Core Information Model provides a common and standardized definition of relevant manufacturing entities, their attributes, and relationships, including their semantic meaning. The contents of the information model are based on the [IEC 62264-1 standard](https://www.iso.org/standard/57308.html). The Information model is implemented in a set of modularized ontologies. This enables manufacturing enterprises to efficiently integrate data and provide a clear semantic context, thus reducing the time required to generate insights from the data. Furthermore, the OMP I4.0 Core Information Model allows companies to reuse data-processing applications across heterogeneous data sources as the standardized data model acts as an abstraction layer over the heterogeneous data decoupling data sources from data processing applications.
 
+### Ontology Visualization
+![Core Ontology](https://github.com/NicoWilh/sds-manufacturing-information-model/blob/main/OMP_I40_CoreOntology.png)
+
 #### The OMP I4.0 Core Information Model Sub-models:
 - Physical Asset Ontology (`phys:`)
 - Equipment Ontology (`eqm:`)
