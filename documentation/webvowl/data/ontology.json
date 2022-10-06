@@ -1,0 +1,1583 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://open-manufacturing.org/ontologies/I4.0/ProductSegment", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://open-manufacturing.org/ontologies/I4.0/Product", "https://open-manufacturing.org/ontologies/I4.0/Parameter", "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://open-manufacturing.org/ontologies/I4.0/Equipment", "https://open-manufacturing.org/ontologies/I4.0/Core", "http://www.w3.org/2001/XMLSchema", "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment", "http://purl.oclc.org/NET/ssnx/qu/qu" ],
+    "title" : {
+      "en" : "OMP I4.0 Core Information Model - Core Ontology"
+    },
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "version" : "1.0",
+    "author" : [ "https://www.linkedin.com/in/marcel-keller-5591a174/", "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/", "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/", "https://www.linkedin.com/in/nico-wilhelm-5b306867/", "Irlan Grangel-Gonzalez, Felix Loesch", "https://www.linkedin.com/in/fabio-massari-b63892/" ],
+    "labels" : {
+      "en" : "OMP I4.0 Core Information Model - Core Ontology"
+    },
+    "comments" : {
+      "en" : "The OMP I4.0 Core Information Model provides a common and standardized definition of relevant manufacturing entities, their attributes, and relationships, including their semantic meaning. The contents of the information model are based on the IEC 62264-1 standard. The Information model is implemented in a set of modularized ontologies. This enables manufacturing enterprises to efficiently integrate data and provide a clear semantic context, thus reducing the time required to generate insights from the data. Furthermore, the OMP I4.0 Core Information Model allows companies to reuse data-processing applications across heterogeneous data sources as the standardized data model acts as an abstraction layer over the heterogeneous data decoupling data sources from data processing applications."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/marcel-keller-5591a174/",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Irlan Grangel-Gonzalez, Felix Loesch",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/nico-wilhelm-5b306867/",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/fabio-massari-b63892/",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "July 13th, 2022",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "en",
+        "value" : "July 18th, 2022",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "OMP I4.0 Core Information Model - Core Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductInstance",
+      "undefined" : "Product Instance"
+    },
+    "comment" : {
+      "undefined" : "Concrete and unique example/occurrence of a product (definition) which is the outcome of manufacturing or assembly. A Product Instance refers to its product (definition) via the “relatesToMaterial” relationship inherited from ProcessedPart."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/Product",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product",
+      "undefined" : "Product"
+    },
+    "comment" : {
+      "undefined" : "Description of a tangible good that is manufactured or assembled and considered ready for being sold to a customer afterwards. Subclass of material.\nNote 1: Product is a perspective of the one who makes it ready for selling."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SemiFinishedProduct",
+      "undefined" : "Semi-Finished Product"
+    },
+    "subClasses" : [ "35", "36" ],
+    "comment" : {
+      "undefined" : "Description of a tangible good that is not yet finished. Subclass of material.\nNote 1: Usually, a semi-finished product is a sub-assembly or a component of another more complex material and is not sold to a customer by itself."
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/Line",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Line",
+      "en" : "Line"
+    },
+    "comment" : {
+      "en" : "Collection of one or more sequentially ordered work units that work together to perform a defined sequence of production processes to manufacture or assemble a product that can be a final or a semi-finished product. \nA line is a subclass of a work center."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessedPart",
+      "undefined" : "Processed Part"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "undefined" : "Description of a unique example/occurrence of a specific material. As such it can be an instantiation of any of the material subclasses. A processed part refers to material it represents via the “relatesToMaterial” relationship."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/Station",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Station",
+      "en" : "Station"
+    },
+    "comment" : {
+      "en" : "A logical grouping of equipment intended to produce a good. Stations are often are linked to a manufacturing process for a semi-finished or finished part. Subclass of a work unit. Stations belong to a line. A line can consist of 1..n stations.\n\nOne or more process segments may be linked to a station. \n\nNote 1: Assets or parts within an Asset represent a station well. Station can be linked to assets via the “isImplementedBy” relationship"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductSegment",
+      "en" : "Product Segment",
+      "undefined" : "Product Segment"
+    },
+    "comment" : {
+      "en" : "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "en" : "Process",
+      "undefined" : "Process"
+    },
+    "comment" : {
+      "undefined" : "Description of a manufacturing process. A manufacturing process may consist of 1..n process segments"
+    },
+    "attributes" : [ "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineComponent",
+      "en" : "Machine Component"
+    },
+    "comment" : {
+      "en" : "A part of a machine which itself may be composed of sub components."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Asset",
+      "en" : "Asset"
+    },
+    "subClasses" : [ "55" ],
+    "comment" : {
+      "en" : "Physical asset that covers primarily machines and tools but excludes buildings.  \n\nNote 1: Short form asset used in this document refers to production asset.  \n\nAssets represent an extension point. \n\nNote 2: You can further subclass assets (e.g. AGVs, …) \n\nReference: IEC 62264-1 ID:3.1.36, Industrie 4.0 – Terms, VDI status report Industrie 4.0 (April 2021)"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plant",
+      "en" : "Plant"
+    },
+    "comment" : {
+      "en" : "Complex and separate organizational structure set up. It is a logical grouping of a manufacturing entity. It contains other equipment such as work centers or work units. Plants may be part of business-oriented entities such as product lines, divisions, sales segments and so on."
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/Assembly",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Assembly",
+      "undefined" : "Assembly"
+    },
+    "comment" : {
+      "undefined" : "Description of a tangible good that is the outcome of a previous assembly process. Subclass of material. This includes especially the outcomes of other internal suppliers (e.g., plant A delivering an assembly to plant B). \nNote 1: It is a perspective of the one who uses it to build a more complex material."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkCenter",
+      "en" : "Work Center"
+    },
+    "subClasses" : [ "38", "44" ],
+    "comment" : {
+      "en" : "Grouping of one or more work units or smaller work centers that are logically or geographically linked. Line and Pool are sub-classes of work centers. A work centers can consist of 1..n work centers (e.g., a pool is part of a line). \nThis term does not refer to SAP work center. It is possible but not recommended to represent an asset as a work center."
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/Component",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component",
+      "undefined" : "Component"
+    },
+    "comment" : {
+      "undefined" : "Description of a tangible good that is input to an assembly process and is typically purchased from a supplier in a “ready for use” form. Subclass of material.\nNote 1: For example, electronic components, bolts and nuts, gear box for a car OEM. \nNote 2: It is a perspective of the one who uses it to build a more complex material."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Equipment",
+      "en" : "Equipment"
+    },
+    "subClasses" : [ "48", "28", "25" ],
+    "comment" : {
+      "en" : "Generalization for all logical elements required to organize or model your manufacturing hierarchy, sequence or flow.\n\nNote 1: The formal UML role-based equipment model object is used to define the role-based equipment hierarchy information that is defined in IEC 62264-1.\n\nNote 2: The model contains the information that may be used to construct the hierarchical models used in manufacturing scenarios.\n\nReference: IEC 62264-1, IEC 62264-2"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building",
+      "en" : "Building"
+    },
+    "comment" : {
+      "en" : "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and?systems?to?perform?value?added?activities."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/Material",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material",
+      "undefined" : "Material"
+    },
+    "subClasses" : [ "32", "34", "73" ],
+    "comment" : {
+      "undefined" : "Abstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. \nNote 1: The term has been purposely selected to create an umbrella for a broad spectrum of possible examples, anAbstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. \nNote 2: Subclasses like product, semi-finished product and raw material allow for more precise and perspective specific classification of materials for the specific context."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkCell",
+      "en" : "Work Cell"
+    },
+    "comment" : {
+      "en" : "Logical sub groupings of stations. A station can consist of 1..n work cells. Subclass of a work unit.\n\nWork cells are intended to implement a process segment. Usually, the mapping between process segment and work cell is a 1:1 mapping."
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialSpecification",
+      "en" : "Material Specification",
+      "undefined" : "Material Specification"
+    },
+    "comment" : {
+      "en" : "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Machine",
+      "en" : "Machine"
+    },
+    "comment" : {
+      "en" : "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RawMaterial",
+      "undefined" : "Raw Material"
+    },
+    "comment" : {
+      "undefined" : "Description of a tangible substrate of a specific manufacturing process that is taken in its basic form as input for subsequent manufacturing. It shall not generally be used in the context of tangible input into assembly process. Subclass of material.\n Note 1: It is a perspective on the one who uses it to manufacture other goods – for example a silicon wafer is raw material for production of semi-conductor electronic devices, where by itself it is a result of complex preparation process, hence a product from perspective of its supplier."
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParameterSpecification",
+      "en" : "Parameter Specification",
+      "undefined" : "Parameter Specification"
+    },
+    "comment" : {
+      "en" : "Specifies the setting parameters and/or result parameters for a process segment or product segment. A parameter specification consists of 1..n parameters."
+    },
+    "attributes" : [ "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://purl.oclc.org/NET/ssnx/qu/qu#Unit",
+    "baseIri" : "http://purl.oclc.org/NET/ssnx/qu/qu",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkUnit",
+      "en" : "Work Unit"
+    },
+    "subClasses" : [ "39", "53" ],
+    "comment" : {
+      "en" : "Logical grouping of equipment at the level below a work center. A work unit can consist of smaller work units. A work unit logically represents the location of executing a manufacturing process and can be linked to a machine or machine component which physically executes the manufacturing process.\n\nIt performs production, storage, material movement, or any other Level three or level four scheduled activity according to the manufacturing operations and control systems hierarchy.\n\nReference: IEC 62264-1 ID:3.1.26"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parameter",
+      "en" : "Parameter",
+      "undefined" : "Parameter"
+    },
+    "subClasses" : [ "50", "57" ],
+    "comment" : {
+      "en" : "An individually measured item or property of a process segment or product segment. Parameters belong to a Parameter Specification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResultParameter",
+      "en" : "Result Parameter",
+      "undefined" : "Result Parameter"
+    },
+    "comment" : {
+      "en" : "Description of the result parameters of a given process or product segment. Result parameters can also contain tolerance values. Subclass of Parameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Level",
+      "en" : "Level"
+    },
+    "comment" : {
+      "en" : "Sub-structure of a building and is synonym to the word building floor."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "70", "9" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SegmentResult",
+      "en" : "Segment Result",
+      "undefined" : "Segment Result"
+    },
+    "comment" : {
+      "en" : "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineTool",
+      "en" : "Machine Tool"
+    },
+    "comment" : {
+      "en" : "A device used in a machine for manufacturing or assembly.  \nNote 1: For example, a drilling tool is used in a drilling machine to drill holes into the product."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pool",
+      "en" : "Pool"
+    },
+    "comment" : {
+      "en" : "Grouping of several parallel work units running the same process or sharing similar capabilities. \nA pool is a subclass of a work center."
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SettingParameter",
+      "en" : "Setting Parameter",
+      "undefined" : "Setting Parameter"
+    },
+    "comment" : {
+      "en" : "Description of input / setting parameters of a given process or product segment. Subclass of Parameter.\nNote 1: Setting parameters can also contain tolerance values."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://purl.org/dc/terms/Location",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location"
+    },
+    "comment" : {
+      "undefined" : "Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).\nA spatial region or named place."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessSegment",
+      "en" : "Process Segment",
+      "undefined" : "Process Segment"
+    },
+    "comment" : {
+      "en" : "Smallest elements of manufacturing activities that are visible to business processes. Multiple process segments together form a process (manufacturing process). Also called business process segment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EquipmentSpecification",
+      "en" : "Equipment Specification",
+      "undefined" : "Equipment Specification"
+    },
+    "comment" : {
+      "en" : "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParameterValue",
+      "en" : "Parameter Value",
+      "undefined" : "Parameter Value"
+    },
+    "comment" : {
+      "en" : "Concrete value of a parameter.\nNote 1: For example, the parameter value of the parameter “Temperature” might be “18.5”."
+    },
+    "attributes" : [ "external" ],
+    "id" : "67"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "consistsOfBuilding",
+      "en" : "consists of building"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "usesMachineTool",
+      "en" : "uses machine tool"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isFollowedBy",
+      "en" : "is followed by",
+      "undefined" : "is followed by"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relationship between \"ProductSegment\" and \"ProductSegment\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "11",
+    "subproperty" : [ "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasPhysicalAsset",
+      "en" : "has physical asset"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  }, {
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "26",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "consistsOfLevel",
+      "en" : "consists of level"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isLocatedInBuilding",
+      "en" : "is located in building"
+    },
+    "domain" : "23",
+    "attributes" : [ "object", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "belongsToBuilding",
+      "en" : "belongs to building"
+    },
+    "domain" : "30",
+    "attributes" : [ "object", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasMaterial",
+      "undefined" : "has material"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relationship between \"MaterialSpecification\" and \"Material\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "relatesToMaterial",
+      "undefined" : "relates to material"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "42"
+  }, {
+    "range" : "25",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "25",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "26",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "51",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "28",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "23",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "51",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "34",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "28",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "paramMinTolerance",
+      "en" : "parameter min tolerance",
+      "undefined" : "parameter min tolerance"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Defines the lower tolerance limit of a parameter."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "60"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasEquipment",
+      "undefined" : "has equipment"
+    },
+    "domain" : "64",
+    "comment" : {
+      "en" : "Relationship between \"EquipmentSpecification\" and \"Equipment\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasEquipmentSpecification",
+      "en" : "has equipment specification",
+      "undefined" : "has equipment specification"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relationship between \"ProductSegment\" and \"EquipmentSpecification\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "belongsToLine",
+      "en" : "belongs to line"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "paramValue",
+      "en" : "parameter value",
+      "undefined" : "parameter value"
+    },
+    "domain" : "67",
+    "comment" : {
+      "en" : "Defines the value of a parameter."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "belongsToStation",
+      "en" : "belongs to station"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "53",
+    "comment" : {
+      "en" : "Relationship between \"WorkCell\" and \"Station\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "consistsOfProcessSegment",
+      "en" : "consists of process segment",
+      "undefined" : "consists of process segment"
+    },
+    "domain" : "46",
+    "attributes" : [ "object", "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "requiresProductSegment",
+      "undefined" : "requires product segment"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relationship between \"Product\" and \"ProductSegment\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "madeUpOfWorkUnit",
+      "en" : "made up of work unit"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "28",
+    "comment" : {
+      "en" : "Transitive Relationship between \"WorkUnit\" with itself"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "belongsToLocation",
+      "en" : "belongs to location"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "hasParameterValue",
+      "undefined" : "has parameter value"
+    },
+    "domain" : "75",
+    "comment" : {
+      "en" : "Relationship between \"SegmentResult\" and \"ParameterValue\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "paramMaxTolerance",
+      "en" : "parameter max tolerance",
+      "undefined" : "parameter max tolerance"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Defines the upper tolerance limit of a parameter."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "consistsOfMachineComponent",
+      "en" : "consists of machine component"
+    },
+    "domain" : "55",
+    "attributes" : [ "object", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "assembledFromProcessedPart",
+      "undefined" : "assembled from processed part"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isUsedByMachineComponent",
+      "en" : "is used by machine component"
+    },
+    "domain" : "5",
+    "attributes" : [ "object", "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "consistsOfWorkUnit",
+      "en" : "consists of work unit"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "25",
+    "comment" : {
+      "en" : "Relationship between \"WorkCenter\" and \"WorkUnit\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Product",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "assembledFromMaterial",
+      "undefined" : "assembled from material"
+    },
+    "domain" : "33",
+    "attributes" : [ "object", "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isComposedOfMachineComponent",
+      "en" : "is composed of machine component"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "isImplementedByAsset",
+      "undefined" : "is implemented by asset"
+    },
+    "domain" : "28",
+    "comment" : {
+      "en" : "Relationship between \"WorkUnit\" and \"Asset\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasMaterialSpecification",
+      "en" : "has material specification",
+      "undefined" : "has material specification"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relationship between \"ProductSegment\" and \"MaterialSpecification\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "belongsToMachine",
+      "en" : "belongs to machine"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "has parameter",
+      "undefined" : "has parameter"
+    },
+    "domain" : "84",
+    "comment" : {
+      "en" : "Relationship between \"ParameterSpecification\" and \"Parameter\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "consistsOfWorkCell",
+      "en" : "consists of work cell"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "39",
+    "comment" : {
+      "en" : "Relationship between \"Station\" and \"WorkCell\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProductSegment",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasSegmentResult",
+      "en" : "has segment result",
+      "undefined" : "has segment result"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relationship between \"ProductSegment\" and \"SegmentResult\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "isValueOf",
+      "en" : "is value of",
+      "undefined" : "is value of"
+    },
+    "domain" : "67",
+    "comment" : {
+      "en" : "Relationship between \"ParameterValue\" and \"Parameter\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "belongsToWorkCenter",
+      "en" : "belongs to work center"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "28",
+    "comment" : {
+      "en" : "Relationship between \"WorkUnit\" and \"WorkCenter\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "hasParameterSpecification",
+      "undefined" : "has parameter specification"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "92",
+    "comment" : {
+      "en" : "Relationship between \"ProcessSegment\" and \"ProductSegment\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "33",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "33",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/ProcessSegment",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "belongsToProcess",
+      "en" : "belongs to process",
+      "undefined" : "belongs to process"
+    },
+    "domain" : "70",
+    "attributes" : [ "object", "external" ],
+    "id" : "96"
+  }, {
+    "range" : "34",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "consistsOfWorkCenter",
+      "en" : "consists of work center"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "48",
+    "comment" : {
+      "en" : "Relationship between \"Plant\" and \"WorkCenter\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "consistsOfStation",
+      "en" : "consists of station"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relationship between \"Line\" and \"Station\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "paramDataType",
+      "en" : "param datatype",
+      "undefined" : "param datatype"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Defines the data type of a parameter. Valid ranges are all xsd data types"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Parameter",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "en" : "has unit",
+      "undefined" : "has unit"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Relationship between \"Parameter\" and \"Unit\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Core",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "implementsProcessSegment",
+      "undefined" : "implements process segment"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relationship between \"ProductSegment\" and \"ProcessSegment\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant",
+    "baseIri" : "https://open-manufacturing.org/ontologies/I4.0/Equipment",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "belongsToPlant",
+      "en" : "belongs to plant"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "25",
+    "comment" : {
+      "en" : "Relationship between \"WorkCenter\" and \"Plant\""
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  } ]
+}
