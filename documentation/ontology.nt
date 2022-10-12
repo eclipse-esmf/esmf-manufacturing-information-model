@@ -1,0 +1,573 @@
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/Equipment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/Product> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/processsegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#imports> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/created> "July 13th, 2022"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "Irlan Grangel-Gonzalez, Felix Loesch"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "https://www.linkedin.com/in/fabio-massari-b63892/" .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "https://www.linkedin.com/in/marcel-keller-5591a174/" .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/creator> "https://www.linkedin.com/in/nico-wilhelm-5b306867/" .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/modified> "July 18th, 2022"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://purl.org/dc/elements/1.1/title> "OMP I4.0 Core Information Model - Core Ontology"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2000/01/rdf-schema#comment> "The OMP I4.0 Core Information Model provides a common and standardized definition of relevant manufacturing entities, their attributes, and relationships, including their semantic meaning. The contents of the information model are based on the IEC 62264-1 standard. The Information model is implemented in a set of modularized ontologies. This enables manufacturing enterprises to efficiently integrate data and provide a clear semantic context, thus reducing the time required to generate insights from the data. Furthermore, the OMP I4.0 Core Information Model allows companies to reuse data-processing applications across heterogeneous data sources as the standardized data model acts as an abstraction layer over the heterogeneous data decoupling data sources from data processing applications."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2000/01/rdf-schema#label> "OMP I4.0 Core Information Model - Core Ontology"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"EquipmentSpecification\" and \"Equipment\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"MaterialSpecification\" and \"Material\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has material" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProcessSegment\" and \"ProductSegment\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"SegmentResult\" and \"ParameterValue\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter value" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment
+<https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProductSegment\" and \"ProcessSegment\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment> <http://www.w3.org/2000/01/rdf-schema#label> "implements process segment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset
+<https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"WorkUnit\" and \"Asset\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset> <http://www.w3.org/2000/01/rdf-schema#label> "is implemented by asset" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment
+<https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Product/Product> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"Product\" and \"ProductSegment\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment> <http://www.w3.org/2000/01/rdf-schema#label> "requires product segment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to line"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"WorkCenter\" and \"Plant\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to plant"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"WorkCell\" and \"Station\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to station"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"WorkUnit\" and \"WorkCenter\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to work center"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"Line\" and \"Station\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation> <http://www.w3.org/2000/01/rdf-schema#label> "consists of station"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"Station\" and \"WorkCell\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell> <http://www.w3.org/2000/01/rdf-schema#label> "consists of work cell"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"Plant\" and \"WorkCenter\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter> <http://www.w3.org/2000/01/rdf-schema#label> "consists of work center"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"WorkCenter\" and \"WorkUnit\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#label> "consists of work unit"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Transitive Relationship between \"WorkUnit\" with itself"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit> <http://www.w3.org/2000/01/rdf-schema#label> "made up of work unit"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ParameterSpecification\" and \"Parameter\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"Parameter\" and \"Unit\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ParameterValue\" and \"Parameter\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/2000/01/rdf-schema#label> "is value of"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf> <http://www.w3.org/2000/01/rdf-schema#label> "is value of" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to building"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to location"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to machine"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "consists of building"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel> <http://www.w3.org/2000/01/rdf-schema#label> "consists of level"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "consists of machine component"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset> <http://www.w3.org/2000/01/rdf-schema#label> "has physical asset"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "is composed of machine component"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "is located in building"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "is used by machine component"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool> <http://www.w3.org/2000/01/rdf-schema#label> "uses machine tool"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to process"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to process" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment> <http://www.w3.org/2000/01/rdf-schema#label> "consists of process segment"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment> <http://www.w3.org/2000/01/rdf-schema#label> "consists of process segment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "assembled from material" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart> <http://www.w3.org/2000/01/rdf-schema#label> "assembled from processed part" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial
+<https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "relates to material" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProductSegment\" and \"EquipmentSpecification\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment specification"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProductSegment\" and \"MaterialSpecification\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has material specification"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has material specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProductSegment\" and \"SegmentResult\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/2000/01/rdf-schema#label> "has segment result"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult> <http://www.w3.org/2000/01/rdf-schema#label> "has segment result" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between \"ProductSegment\" and \"ProductSegment\""@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is followed by"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is followed by" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the data type of a parameter. Valid ranges are all xsd data types"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType> <http://www.w3.org/2000/01/rdf-schema#label> "param datatype"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType> <http://www.w3.org/2000/01/rdf-schema#label> "param datatype" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the upper tolerance limit of a parameter."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "parameter max tolerance"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "parameter max tolerance" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the lower tolerance limit of a parameter."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "parameter min tolerance"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "parameter min tolerance" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the value of a parameter."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue> <http://www.w3.org/2000/01/rdf-schema#label> "parameter value"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue> <http://www.w3.org/2000/01/rdf-schema#label> "parameter value" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.oclc.org/NET/ssnx/qu/qu#Unit
+<http://purl.oclc.org/NET/ssnx/qu/qu#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Generalization for all logical elements required to organize or model your manufacturing hierarchy, sequence or flow.\n\nNote 1: The formal UML role-based equipment model object is used to define the role-based equipment hierarchy information that is defined in IEC 62264-1.\n\nNote 2: The model contains the information that may be used to construct the hierarchical models used in manufacturing scenarios.\n\nReference: IEC 62264-1, IEC 62264-2"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/Line
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of one or more sequentially ordered work units that work together to perform a defined sequence of production processes to manufacture or assemble a product that can be a final or a semi-finished product. \nA line is a subclass of a work center."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> <http://www.w3.org/2000/01/rdf-schema#comment> "Complex and separate organizational structure set up. It is a logical grouping of a manufacturing entity. It contains other equipment such as work centers or work units. Plants may be part of business-oriented entities such as product lines, divisions, sales segments and so on."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant> <http://www.w3.org/2000/01/rdf-schema#label> "Plant"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool> <http://www.w3.org/2000/01/rdf-schema#comment> "Grouping of several parallel work units running the same process or sharing similar capabilities. \nA pool is a subclass of a work center."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool> <http://www.w3.org/2000/01/rdf-schema#label> "Pool"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/Station
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> <http://www.w3.org/2000/01/rdf-schema#comment> "A logical grouping of equipment intended to produce a good. Stations are often are linked to a manufacturing process for a semi-finished or finished part. Subclass of a work unit. Stations belong to a line. A line can consist of 1..n stations.\n\nOne or more process segments may be linked to a station. \n\nNote 1: Assets or parts within an Asset represent a station well. Station can be linked to assets via the “isImplementedBy” relationship"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/Station> <http://www.w3.org/2000/01/rdf-schema#label> "Station"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical sub groupings of stations. A station can consist of 1..n work cells. Subclass of a work unit.\n\nWork cells are intended to implement a process segment. Usually, the mapping between process segment and work cell is a 1:1 mapping."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell> <http://www.w3.org/2000/01/rdf-schema#label> "Work Cell"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Grouping of one or more work units or smaller work centers that are logically or geographically linked. Line and Pool are sub-classes of work centers. A work centers can consist of 1..n work centers (e.g., a pool is part of a line). \nThis term does not refer to SAP work center. It is possible but not recommended to represent an asset as a work center."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Work Center"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment> .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical grouping of equipment at the level below a work center. A work unit can consist of smaller work units. A work unit logically represents the location of executing a manufacturing process and can be linked to a machine or machine component which physically executes the manufacturing process.\n\nIt performs production, storage, material movement, or any other Level three or level four scheduled activity according to the manufacturing operations and control systems hierarchy.\n\nReference: IEC 62264-1 ID:3.1.26"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Work Unit"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "An individually measured item or property of a process segment or product segment. Parameters belong to a Parameter Specification."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the setting parameters and/or result parameters for a process segment or product segment. A parameter specification consists of 1..n parameters."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Specification"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Concrete value of a parameter.\nNote 1: For example, the parameter value of the parameter “Temperature” might be “18.5”."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Value"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Value" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the result parameters of a given process or product segment. Result parameters can also contain tolerance values. Subclass of Parameter"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Result Parameter"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Result Parameter" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter> .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of input / setting parameters of a given process or product segment. Subclass of Parameter.\nNote 1: Setting parameters can also contain tolerance values."@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Setting Parameter"@en .
+<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Setting Parameter" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical asset that covers primarily machines and tools but excludes buildings.  \n\nNote 1: Short form asset used in this document refers to production asset.  \n\nAssets represent an extension point. \n\nNote 2: You can further subclass assets (e.g. AGVs, …) \n\nReference: IEC 62264-1 ID:3.1.36, Industrie 4.0 – Terms, VDI status report Industrie 4.0 (April 2021)"@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-structure of a building and is synonym to the word building floor."@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level> <http://www.w3.org/2000/01/rdf-schema#label> "Level"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).\nA spatial region or named place." .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/Location"@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine> <http://www.w3.org/2000/01/rdf-schema#label> "Machine"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of a machine which itself may be composed of sub components."@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Component"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used in a machine for manufacturing or assembly.  \nNote 1: For example, a drilling tool is used in a drilling machine to drill holes into the product."@en .
+<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Tool"@en .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a manufacturing process. A manufacturing process may consist of 1..n process segments" .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Smallest elements of manufacturing activities that are visible to business processes. Multiple process segments together form a process (manufacturing process). Also called business process segment."@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Process Segment"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Process Segment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/Assembly
+<https://open-manufacturing.org/ontologies/I4.0/Product/Assembly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Assembly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Assembly> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a tangible good that is the outcome of a previous assembly process. Subclass of material. This includes especially the outcomes of other internal suppliers (e.g., plant A delivering an assembly to plant B). \nNote 1: It is a perspective of the one who uses it to build a more complex material." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Assembly> <http://www.w3.org/2000/01/rdf-schema#label> "Assembly" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/Component
+<https://open-manufacturing.org/ontologies/I4.0/Product/Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a tangible good that is input to an assembly process and is typically purchased from a supplier in a “ready for use” form. Subclass of material.\nNote 1: For example, electronic components, bolts and nuts, gear box for a car OEM. \nNote 2: It is a perspective of the one who uses it to build a more complex material." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/Material
+<https://open-manufacturing.org/ontologies/I4.0/Product/Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. \nNote 1: The term has been purposely selected to create an umbrella for a broad spectrum of possible examples, anAbstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. \nNote 2: Subclasses like product, semi-finished product and raw material allow for more precise and perspective specific classification of materials for the specific context." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a unique example/occurrence of a specific material. As such it can be an instantiation of any of the material subclasses. A processed part refers to material it represents via the “relatesToMaterial” relationship." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> <http://www.w3.org/2000/01/rdf-schema#label> "Processed Part" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/Product
+<https://open-manufacturing.org/ontologies/I4.0/Product/Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Product> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a tangible good that is manufactured or assembled and considered ready for being sold to a customer afterwards. Subclass of material.\nNote 1: Product is a perspective of the one who makes it ready for selling." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Concrete and unique example/occurrence of a product (definition) which is the outcome of manufacturing or assembly. A Product Instance refers to its product (definition) via the “relatesToMaterial” relationship inherited from ProcessedPart." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Product Instance" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial
+<https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a tangible substrate of a specific manufacturing process that is taken in its basic form as input for subsequent manufacturing. It shall not generally be used in the context of tangible input into assembly process. Subclass of material.\n Note 1: It is a perspective on the one who uses it to manufacture other goods – for example a silicon wafer is raw material for production of semi-conductor electronic devices, where by itself it is a result of complex preparation process, hence a product from perspective of its supplier." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Raw Material" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct
+<https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://open-manufacturing.org/ontologies/I4.0/Product/Material> .
+<https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a tangible good that is not yet finished. Subclass of material.\nNote 1: Usually, a semi-finished product is a sub-assembly or a component of another more complex material and is not sold to a customer by itself." .
+<https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Semi-Finished Product" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment Specification"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment Specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Material Specification"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Material Specification" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Product Segment"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Product Segment" .
+# 
+# https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Result"@en .
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Result" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
