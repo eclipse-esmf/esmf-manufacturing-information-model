@@ -170,7 +170,7 @@ The working group may decide that it reached a stable state for the contents of 
 For such a release the `working group` must approve the current state of the `main` branch as agreement. A `maintainer` of the repository then forks the `main` branch into a new branch that follows the naming convention `v{version_number}-RC`. The organization team of the OMP is then asked to `review & approve` the `v{version_number}-RC` branch. If the organization agrees on the approval the OMP steering committee needs to be notified. After that notification, a `maintainer` triggers the release feature from GitHub based on the commit on which the `v{version_number}-RC` branch is based.
 
 ## Versioning
-We use Semantic Versioning to identify versions of published BAMM Aspect Meta Models. Semantic Versioning is documented [here] (https://semver.org). It proposes to have a versioning number with the following elements:
+We use Semantic Versioning to identify versions of published OMP SDS I4.0 Information Model Ontologies and Knowledge Graphs. Semantic Versioning is documented [here] (https://semver.org). It proposes to have a versioning number with the following elements:
 
 ````
 Given a version number MAJOR.MINOR.PATCH, increment the:
