@@ -17,17 +17,18 @@
     <https://eclipse-esmf.github.io/ontologies/I4.0/Product> ,
     <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> ,
     <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment> ;
+  dc:title "ESMF I4.0 Core Information Model - Core Ontology"@en ;
+  rdfs:comment "This ontology integrates the sub-ontologies of the ESMF I4.0 Core Information Model."@en ;
+  rdfs:label "ESMF I4.0 Core Information Model - Core Ontology"@en ;
   dc:created "July 13th, 2022"@en ;
+  dc:modified "July 11th, 2023"@en ;
   dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
     "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
     "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
     "https://www.linkedin.com/in/fabio-massari-b63892/" ,
     "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
     "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
-  dc:modified "July 18th, 2022"@en ;
-  dc:title "OMP I4.0 Core Information Model - Core Ontology"@en ;
-  rdfs:comment "This ontology integrates the sub-ontologies of the OMP I4.0 Core Information Model."@en ;
-  rdfs:label "OMP I4.0 Core Information Model - Core Ontology"@en ;
+  dc:contributor <https://atextor.de/foaf.ttl#atextor> ;
   owl:versionInfo "1.0"@en .
 
 #################################################################

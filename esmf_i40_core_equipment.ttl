@@ -5,18 +5,19 @@
 @base <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment> .
 
 <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment> a owl:Ontology ;
-  dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
+  dc:title "ESMF I4.0 Core Information Model - Equipment Ontology"@en ;
+  rdfs:comment "This ontology models concepts and relationships to organize assets according to logical principles"@en ;
+  rdfs:label "ESMF I4.0 Core Information Model - Equipment Ontology"@en ;
   dc:created "April 27th, 2022"@en ;
+  dc:modified "July 11th, 2023"@en ;
   dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
     "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
     "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
     "https://www.linkedin.com/in/fabio-massari-b63892/" ,
     "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
     "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
-  dc:modified "June 22nd, 2022"@en ;
-  dc:title "OMP I4.0 Core Information Model - Equipment Ontology"@en ;
-  rdfs:comment "This ontology models concepts and relationships to organize assets according to logical principles"@en ;
-  rdfs:label "OMP I4.0 Core Information Model - Equipment Ontology"@en ;
+  dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ,
+    <https://atextor.de/foaf.ttl#atextor> ;
   owl:versionInfo "1.0"@en .
 
 #################################################################
