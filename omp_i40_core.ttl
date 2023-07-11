@@ -18,7 +18,7 @@
                                                                    <https://open-manufacturing.org/ontologies/I4.0/Parameter> ,
                                                                    <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset> ,
                                                                    <https://open-manufacturing.org/ontologies/I4.0/Product> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/processsegment> ,
+                                                                   <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment> ,
                                                                    <https://open-manufacturing.org/ontologies/I4.0/ProductSegment> ;
                                                        dc:created "July 13th, 2022"@en ;
                                                        dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
