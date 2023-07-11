@@ -11,6 +11,7 @@
 @prefix param: <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
 @prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
 @prefix pros-seg: <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/> .
+@prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
 @base <https://open-manufacturing.org/ontologies/I4.0/Core> .
 
 <https://open-manufacturing.org/ontologies/I4.0/Core> rdf:type owl:Ontology ;
@@ -428,7 +429,7 @@ prod:hasRawMaterialName rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.oclc.org/NET/ssnx/qu/qu#Unit
-<http://purl.oclc.org/NET/ssnx/qu/qu#Unit> rdf:type owl:Class .
+qu:Unit rdf:type owl:Class .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment
@@ -709,7 +710,7 @@ prod-seg:SegmentResult rdf:type owl:Class ;
 
 ###  http://purl.oclc.org/NET/ssnx/qu/qu#Unit/1/min
 <http://purl.oclc.org/NET/ssnx/qu/qu#Unit/1/min> rdf:type owl:NamedIndividual ,
-                                                          <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> .
+                                                          qu:Unit .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Line/Aluminium_Cast

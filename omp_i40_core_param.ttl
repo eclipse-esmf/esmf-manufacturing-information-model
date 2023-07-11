@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix param: <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
+@prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
 @base <https://open-manufacturing.org/ontologies/I4.0/Parameter> .
 
 <https://open-manufacturing.org/ontologies/I4.0/Parameter> rdf:type owl:Ontology ;
@@ -62,7 +63,7 @@ param:hasParameter rdf:type owl:ObjectProperty ;
 ###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit
 param:hasUnit rdf:type owl:ObjectProperty ;
               rdfs:domain param:Parameter ;
-              rdfs:range <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> ;
+              rdfs:range qu:Unit ;
               rdfs:comment "Relationship between \"Parameter\" and \"Unit\""@en ;
               rdfs:label "has unit" ,
                          "has unit"@en .
@@ -118,7 +119,7 @@ param:paramValue rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.oclc.org/NET/ssnx/qu/qu#Unit
-<http://purl.oclc.org/NET/ssnx/qu/qu#Unit> rdf:type owl:Class .
+qu:Unit rdf:type owl:Class .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter
