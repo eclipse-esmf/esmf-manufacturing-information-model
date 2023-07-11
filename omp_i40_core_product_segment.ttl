@@ -7,7 +7,7 @@
 @prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
 @base <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
 
-<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> rdf:type owl:Ontology ;
+<https://open-manufacturing.org/ontologies/I4.0/ProductSegment> rdf:type owl:Ontology ;
                                                                   dc:created "June 27th, 2022"@en ;
                                                                   dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
                                                                              "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
