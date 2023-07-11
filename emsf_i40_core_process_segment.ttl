@@ -1,90 +1,75 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pros-seg: pros-seg: .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pros-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @base <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> .
 
-<https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> rdf:type owl:Ontology ;
-                                                                 dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
-                                                                 dc:created "June 15th, 2022"@en ;
-                                                                 dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
-                                                                                                           "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
-                                                                                                           "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
-                                                                                                           "https://www.linkedin.com/in/fabio-massari-b63892/" ,
-                                                                                                           "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
-                                                                                                           "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
-                                                                 dc:modified "June 16th, 2022"@en ;
-                                                                 dc:title "Process Segment Ontology"@en ;
-                                                                 rdfs:comment "This ontology shows concepts and relationships to organize process segments"@en ;
-                                                                 rdfs:label "Process Segment Ontology"@en ;
-                                                                 owl:versionInfo "1.0"@en .
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> a owl:Ontology ;
+  dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
+  dc:created "June 15th, 2022"@en ;
+  dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
+    "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+    "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+    "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+    "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+    "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+  dc:modified "June 16th, 2022"@en ;
+  dc:title "Process Segment Ontology"@en ;
+  rdfs:comment "This ontology shows concepts and relationships to organize process segments"@en ;
+  rdfs:label "Process Segment Ontology"@en ;
+  owl:versionInfo "1.0"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
-
+dc:contributor a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/created
-dc:created rdf:type owl:AnnotationProperty .
-
+dc:created a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
-
+dc:creator a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/modified
-dc:modified rdf:type owl:AnnotationProperty .
-
+dc:modified a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
+dc:title a owl:AnnotationProperty .
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/belongsToProcess
-pros-seg:belongsToProcess rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:domain pros-seg:ProcessSegment ;
-                                                                                 rdfs:range pros-seg:Process ;
-                                                                                 rdfs:label "belongs to process"@en ,
-                                                                                            "belongs to process"^^xsd:string .
-
+pros-seg:belongsToProcess a owl:ObjectProperty ;
+  rdfs:domain pros-seg:ProcessSegment ;
+  rdfs:range pros-seg:Process ;
+  rdfs:label "belongs to process"@en ,
+    "belongs to process"^^xsd:string .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
-pros-seg:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
-                                                                                         rdfs:domain pros-seg:Process ;
-                                                                                         rdfs:range pros-seg:ProcessSegment ;
-                                                                                         rdfs:label "consists of process segment"@en ,
-                                                                                                    "consists of process segment"^^xsd:string .
-
+pros-seg:consistsOfProcessSegment a owl:ObjectProperty ;
+  rdfs:domain pros-seg:Process ;
+  rdfs:range pros-seg:ProcessSegment ;
+  rdfs:label "consists of process segment"@en ,
+    "consists of process segment"^^xsd:string .
 
 #################################################################
 #    Classes
 #################################################################
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/Process
-pros-seg:Process rdf:type owl:Class ;
-                                                                        rdfs:comment """Description of a manufacturing process. A manufacturing process may
-consist of 1..n process segments"""^^xsd:string ;
-                                                                        rdfs:label "Process"@en ,
-                                                                                   "Process"^^xsd:string .
-
+pros-seg:Process a owl:Class ;
+  rdfs:comment """Description of a manufacturing process. A manufacturing process may consist of 1..n process segments"""^^xsd:string ;
+  rdfs:label "Process"@en ,
+    "Process"^^xsd:string .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/ProcessSegment
-pros-seg:ProcessSegment rdf:type owl:Class ;
-                                                                               rdfs:comment """Smallest elements of manufacturing activities that are visible to
-business processes. Multiple process segments together form a process
-(manufacturing process). Also called business process segment."""@en ;
-                                                                               rdfs:label "Process Segment"@en ,
-                                                                                          "Process Segment"^^xsd:string .
+pros-seg:ProcessSegment a owl:Class ;
+  rdfs:comment """Smallest elements of manufacturing activities that are visible to business processes. Multiple process segments together form a process (manufacturing process). Also called business process segment."""@en ;
+  rdfs:label "Process Segment"@en ,
+    "Process Segment"^^xsd:string .
 
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,188 +1,161 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix phys: <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix phys: <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/> .
 @base <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset> .
 
-<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset> rdf:type owl:Ontology ;
-                                                                dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
-                                                                dc:created "April 27th, 2022"@en ;
-                                                                dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
-                                                                           "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
-                                                                           "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
-                                                                           "https://www.linkedin.com/in/fabio-massari-b63892/" ,
-                                                                           "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
-                                                                           "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
-                                                                dc:modified "June 22nd, 2022"@en ;
-                                                                dc:title "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
-                                                                rdfs:comment "This ontology models concepts and relationships to organize assets according to physical principles"@en ;
-                                                                rdfs:label "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
-                                                                owl:versionInfo "1.0"@en .
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset> a owl:Ontology ;
+  dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
+  dc:created "April 27th, 2022"@en ;
+  dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
+    "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
+    "https://www.linkedin.com/in/dr-irlan-grangel-gonzalez/" ,
+    "https://www.linkedin.com/in/fabio-massari-b63892/" ,
+    "https://www.linkedin.com/in/marcel-keller-5591a174/" ,
+    "https://www.linkedin.com/in/nico-wilhelm-5b306867/" ;
+  dc:modified "June 22nd, 2022"@en ;
+  dc:title "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
+  rdfs:comment "This ontology models concepts and relationships to organize assets according to physical principles"@en ;
+  rdfs:label "OMP I4.0 Core Information Model - Physical Asset Ontology"@en ;
+  owl:versionInfo "1.0"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
-
+dc:contributor a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/created
-dc:created rdf:type owl:AnnotationProperty .
-
+dc:created a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
-
+dc:creator a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/modified
-dc:modified rdf:type owl:AnnotationProperty .
-
+dc:modified a owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
+dc:title a owl:AnnotationProperty .
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToBuilding
-phys:belongsToBuilding rdf:type owl:ObjectProperty ;
-                       rdfs:domain phys:Level ;
-                       rdfs:range phys:Building ;
-                       rdfs:label "belongs to building"@en .
-
+phys:belongsToBuilding a owl:ObjectProperty ;
+  rdfs:domain phys:Level ;
+  rdfs:range phys:Building ;
+  rdfs:label "belongs to building"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToLocation
-phys:belongsToLocation rdf:type owl:ObjectProperty ;
-                       rdfs:domain phys:Building ;
-                       rdfs:range phys:Location ;
-                       rdfs:label "belongs to location"@en .
-
+phys:belongsToLocation a owl:ObjectProperty ;
+  rdfs:domain phys:Building ;
+  rdfs:range phys:Location ;
+  rdfs:label "belongs to location"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToMachine
-phys:belongsToMachine rdf:type owl:ObjectProperty ;
-                      rdfs:domain phys:MachineComponent ;
-                      rdfs:range phys:Machine ;
-                      rdfs:label "belongs to machine"@en .
-
+phys:belongsToMachine a owl:ObjectProperty ;
+  rdfs:domain phys:MachineComponent ;
+  rdfs:range phys:Machine ;
+  rdfs:label "belongs to machine"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfBuilding
-phys:consistsOfBuilding rdf:type owl:ObjectProperty ;
-                        rdfs:domain phys:Location ;
-                        rdfs:range phys:Building ;
-                        rdfs:label "consists of building"@en .
-
+phys:consistsOfBuilding a owl:ObjectProperty ;
+  rdfs:domain phys:Location ;
+  rdfs:range phys:Building ;
+  rdfs:label "consists of building"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfLevel
-phys:consistsOfLevel rdf:type owl:ObjectProperty ;
-                     rdfs:domain phys:Building ;
-                     rdfs:range phys:Level ;
-                     rdfs:label "consists of level"@en .
-
+phys:consistsOfLevel a owl:ObjectProperty ;
+  rdfs:domain phys:Building ;
+  rdfs:range phys:Level ;
+  rdfs:label "consists of level"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent
-phys:consistsOfMachineComponent rdf:type owl:ObjectProperty ;
-                                rdfs:domain phys:Machine ;
-                                rdfs:range phys:MachineComponent ;
-                                rdfs:label "consists of machine component"@en .
-
+phys:consistsOfMachineComponent a owl:ObjectProperty ;
+  rdfs:domain phys:Machine ;
+  rdfs:range phys:MachineComponent ;
+  rdfs:label "consists of machine component"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset
-phys:hasPhysicalAsset rdf:type owl:ObjectProperty ;
-                      rdfs:domain phys:Building ;
-                      rdfs:range phys:Asset ;
-                      rdfs:label "has physical asset"@en .
-
+phys:hasPhysicalAsset a owl:ObjectProperty ;
+  rdfs:domain phys:Building ;
+  rdfs:range phys:Asset ;
+  rdfs:label "has physical asset"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent
-phys:isComposedOfMachineComponent rdf:type owl:ObjectProperty ;
-                                  rdfs:domain phys:MachineComponent ;
-                                  rdfs:range phys:MachineComponent ;
-                                  rdfs:label "is composed of machine component"@en .
-
+phys:isComposedOfMachineComponent a owl:ObjectProperty ;
+  rdfs:domain phys:MachineComponent ;
+  rdfs:range phys:MachineComponent ;
+  rdfs:label "is composed of machine component"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding
-phys:isLocatedInBuilding rdf:type owl:ObjectProperty ;
-                         rdfs:domain phys:Asset ;
-                         rdfs:range phys:Building ;
-                         rdfs:label "is located in building"@en .
-
+phys:isLocatedInBuilding a owl:ObjectProperty ;
+  rdfs:domain phys:Asset ;
+  rdfs:range phys:Building ;
+  rdfs:label "is located in building"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent
-phys:isUsedByMachineComponent rdf:type owl:ObjectProperty ;
-                              rdfs:domain phys:MachineTool ;
-                              rdfs:range phys:MachineComponent ;
-                              rdfs:label "is used by machine component"@en .
-
+phys:isUsedByMachineComponent a owl:ObjectProperty ;
+  rdfs:domain phys:MachineTool ;
+  rdfs:range phys:MachineComponent ;
+  rdfs:label "is used by machine component"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/usesMachineTool
-phys:usesMachineTool rdf:type owl:ObjectProperty ;
-                     rdfs:domain phys:MachineComponent ;
-                     rdfs:range phys:MachineTool ;
-                     rdfs:label "uses machine tool"@en .
-
+phys:usesMachineTool a owl:ObjectProperty ;
+  rdfs:domain phys:MachineComponent ;
+  rdfs:range phys:MachineTool ;
+  rdfs:label "uses machine tool"@en .
 
 #################################################################
 #    Classes
 #################################################################
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Asset
-phys:Asset rdf:type owl:Class ;
-           rdfs:comment """Physical asset that covers primarily machines and tools but excludes buildings.  
+phys:Asset a owl:Class ;
+  rdfs:comment """Physical asset that covers primarily machines and tools but excludes buildings.
 
-Note 1: Short form asset used in this document refers to production asset.  
+Note 1: Short form asset used in this document refers to production asset.
 
-Assets represent an extension point. 
+Assets represent an extension point.
 
-Note 2: You can further subclass assets (e.g. AGVs, …) 
+Note 2: You can further subclass assets (e.g. AGVs, …)
 
 Reference: IEC 62264-1 ID:3.1.36, Industrie 4.0 – Terms, VDI status report Industrie 4.0 (April 2021)"""@en ;
-           rdfs:label "Asset"@en .
-
+  rdfs:label "Asset"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Building
-phys:Building rdf:type owl:Class ;
-              rdfs:comment "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en ;
-              rdfs:label "Building"@en .
-
+phys:Building a owl:Class ;
+  rdfs:comment "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en ;
+  rdfs:label "Building"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Level
-phys:Level rdf:type owl:Class ;
-           rdfs:comment "Sub-structure of a building and is synonym to the word building floor."@en ;
-           rdfs:label "Level"@en .
-
+phys:Level a owl:Class ;
+  rdfs:comment "Sub-structure of a building and is synonym to the word building floor."@en ;
+  rdfs:label "Level"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Location
-phys:Location rdf:type owl:Class ;
-              rdfs:comment """Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).
+phys:Location a owl:Class ;
+  rdfs:comment """Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).
 A spatial region or named place.""" ;
-              rdfs:isDefinedBy "http://purl.org/dc/terms/Location"@en ;
-              rdfs:label "Location"@en .
-
+  rdfs:isDefinedBy "http://purl.org/dc/terms/Location"@en ;
+  rdfs:label "Location"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine
-phys:Machine rdf:type owl:Class ;
-             rdfs:subClassOf phys:Asset ;
-             rdfs:comment "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en ;
-             rdfs:label "Machine"@en .
-
+phys:Machine a owl:Class ;
+  rdfs:subClassOf phys:Asset ;
+  rdfs:comment "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en ;
+  rdfs:label "Machine"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineComponent
-phys:MachineComponent rdf:type owl:Class ;
-                      rdfs:comment "A part of a machine which itself may be composed of sub components."@en ;
-                      rdfs:label "Machine Component"@en .
-
+phys:MachineComponent a owl:Class ;
+  rdfs:comment "A part of a machine which itself may be composed of sub components."@en ;
+  rdfs:label "Machine Component"@en .
 
 ###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineTool
-phys:MachineTool rdf:type owl:Class ;
-                 rdfs:comment """A device used in a machine for manufacturing or assembly.  
+phys:MachineTool a owl:Class ;
+  rdfs:comment """A device used in a machine for manufacturing or assembly.
 Note 1: For example, a drilling tool is used in a drilling machine to drill holes into the product."""@en ;
-                 rdfs:label "Machine Tool"@en .
+  rdfs:label "Machine Tool"@en .
 
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
