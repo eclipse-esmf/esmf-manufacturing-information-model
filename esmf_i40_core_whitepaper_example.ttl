@@ -1,20 +1,20 @@
-@prefix core: <https://open-manufacturing.org/ontologies/I4.0/Core/> .
+@prefix core: <https://eclipse-esmf.github.io/ontologies/I4.0/Core/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix eqm: <https://open-manufacturing.org/ontologies/I4.0/Equipment/> .
+@prefix eqm: <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix phys: <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/> .
-@prefix prod: <https://open-manufacturing.org/ontologies/I4.0/Product/> .
+@prefix phys: <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/> .
+@prefix prod: <https://eclipse-esmf.github.io/ontologies/I4.0/Product/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix param: <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
-@prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
-@prefix pros-seg: <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/> .
+@prefix param: <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/> .
+@prefix prod-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/> .
+@prefix pros-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
-@base <https://open-manufacturing.org/ontologies/I4.0/Core> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/Core> .
 
-<https://open-manufacturing.org/ontologies/I4.0/Core> rdf:type owl:Ontology ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/Core> rdf:type owl:Ontology ;
                                                        dc:created "July 13th, 2022"@en ;
                                                        dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
                                                                   "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
@@ -52,7 +52,7 @@ dc:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasEquipment
 core:hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:domain prod-seg:EquipmentSpecification ;
               rdfs:range eqm:Equipment ;
@@ -60,7 +60,7 @@ core:hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:label "has equipment" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasMaterial
 core:hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain prod-seg:MaterialSpecification ;
              rdfs:range prod:Material ;
@@ -68,7 +68,7 @@ core:hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:label "has material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasParameterSpecification
 core:hasParameterSpecification rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain pros-seg:ProcessSegment ,
@@ -78,7 +78,7 @@ core:hasParameterSpecification rdf:type owl:ObjectProperty ;
                            rdfs:label "has parameter specification" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasParameterValue
 core:hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:domain prod-seg:SegmentResult ;
                    rdfs:range param:ParameterValue ;
@@ -86,7 +86,7 @@ core:hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:label "has parameter value" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/implementsProcessSegment
 core:implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range pros-seg:ProcessSegment ;
@@ -94,7 +94,7 @@ core:implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:label "implements process segment" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/isImplementedByAsset
 core:isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:domain eqm:WorkUnit ;
                       rdfs:range phys:Asset ;
@@ -102,7 +102,7 @@ core:isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:label "is implemented by asset" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/requiresProductSegment
 core:requiresProductSegment rdf:type owl:ObjectProperty ;
                         rdfs:domain prod:Product ;
                         rdfs:range prod-seg:ProductSegment ;
@@ -110,7 +110,7 @@ core:requiresProductSegment rdf:type owl:ObjectProperty ;
                         rdfs:label "requires product segment" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToLine
 eqm:belongsToLine rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain eqm:Station ;
@@ -118,7 +118,7 @@ eqm:belongsToLine rdf:type owl:ObjectProperty ;
                   rdfs:label "belongs to line"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToPlant
 eqm:belongsToPlant rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain eqm:WorkCenter ;
@@ -127,7 +127,7 @@ eqm:belongsToPlant rdf:type owl:ObjectProperty ;
                    rdfs:label "belongs to plant"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToStation
 eqm:belongsToStation rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain eqm:WorkCell ;
@@ -136,7 +136,7 @@ eqm:belongsToStation rdf:type owl:ObjectProperty ;
                      rdfs:label "belongs to station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToWorkCenter
 eqm:belongsToWorkCenter rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain eqm:WorkUnit ;
@@ -145,7 +145,7 @@ eqm:belongsToWorkCenter rdf:type owl:ObjectProperty ;
                         rdfs:label "belongs to work center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfStation
 eqm:consistsOfStation rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain eqm:Line ;
@@ -154,7 +154,7 @@ eqm:consistsOfStation rdf:type owl:ObjectProperty ;
                       rdfs:label "consists of station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkCell
 eqm:consistsOfWorkCell rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain eqm:Station ;
@@ -163,7 +163,7 @@ eqm:consistsOfWorkCell rdf:type owl:ObjectProperty ;
                        rdfs:label "consists of work cell"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkCenter
 eqm:consistsOfWorkCenter rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain eqm:Plant ;
@@ -172,7 +172,7 @@ eqm:consistsOfWorkCenter rdf:type owl:ObjectProperty ;
                          rdfs:label "consists of work center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkUnit
 eqm:consistsOfWorkUnit rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain eqm:WorkCenter ;
@@ -181,7 +181,7 @@ eqm:consistsOfWorkUnit rdf:type owl:ObjectProperty ;
                        rdfs:label "consists of work unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/madeUpOfWorkUnit
 eqm:madeUpOfWorkUnit rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain eqm:WorkUnit ;
@@ -190,7 +190,7 @@ eqm:madeUpOfWorkUnit rdf:type owl:ObjectProperty ;
                      rdfs:label "made up of work unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/hasParameter
 param:hasParameter rdf:type owl:ObjectProperty ;
                    rdfs:domain param:ParameterSpecification ;
                    rdfs:range param:Parameter ;
@@ -199,7 +199,7 @@ param:hasParameter rdf:type owl:ObjectProperty ;
                               "has parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/hasUnit
 param:hasUnit rdf:type owl:ObjectProperty ;
               rdfs:domain param:Parameter ;
               rdfs:range <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> ;
@@ -208,7 +208,7 @@ param:hasUnit rdf:type owl:ObjectProperty ;
                          "has unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/isValueOf
 param:isValueOf rdf:type owl:ObjectProperty ;
                 rdfs:domain param:ParameterValue ;
                 rdfs:range param:Parameter ;
@@ -217,84 +217,84 @@ param:isValueOf rdf:type owl:ObjectProperty ;
                            "is value of"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToBuilding
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToBuilding
 phys:belongsToBuilding rdf:type owl:ObjectProperty ;
                        rdfs:domain phys:Level ;
                        rdfs:range phys:Building ;
                        rdfs:label "belongs to building"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToLocation
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToLocation
 phys:belongsToLocation rdf:type owl:ObjectProperty ;
                        rdfs:domain phys:Building ;
                        rdfs:range phys:Location ;
                        rdfs:label "belongs to location"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/belongsToMachine
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/belongsToMachine
 phys:belongsToMachine rdf:type owl:ObjectProperty ;
                       rdfs:domain phys:MachineComponent ;
                       rdfs:range phys:Machine ;
                       rdfs:label "belongs to machine"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfBuilding
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfBuilding
 phys:consistsOfBuilding rdf:type owl:ObjectProperty ;
                         rdfs:domain phys:Location ;
                         rdfs:range phys:Building ;
                         rdfs:label "consists of building"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfLevel
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfLevel
 phys:consistsOfLevel rdf:type owl:ObjectProperty ;
                      rdfs:domain phys:Building ;
                      rdfs:range phys:Level ;
                      rdfs:label "consists of level"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/consistsOfMachineComponent
 phys:consistsOfMachineComponent rdf:type owl:ObjectProperty ;
                                 rdfs:domain phys:Machine ;
                                 rdfs:range phys:MachineComponent ;
                                 rdfs:label "consists of machine component"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/hasPhysicalAsset
 phys:hasPhysicalAsset rdf:type owl:ObjectProperty ;
                       rdfs:domain phys:Building ;
                       rdfs:range phys:Asset ;
                       rdfs:label "has physical asset"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isComposedOfMachineComponent
 phys:isComposedOfMachineComponent rdf:type owl:ObjectProperty ;
                                   rdfs:domain phys:MachineComponent ;
                                   rdfs:range phys:MachineComponent ;
                                   rdfs:label "is composed of machine component"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isLocatedInBuilding
 phys:isLocatedInBuilding rdf:type owl:ObjectProperty ;
                          rdfs:domain phys:Asset ;
                          rdfs:range phys:Building ;
                          rdfs:label "is located in building"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/isUsedByMachineComponent
 phys:isUsedByMachineComponent rdf:type owl:ObjectProperty ;
                               rdfs:domain phys:MachineTool ;
                               rdfs:range phys:MachineComponent ;
                               rdfs:label "is used by machine component"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/usesMachineTool
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/usesMachineTool
 phys:usesMachineTool rdf:type owl:ObjectProperty ;
                      rdfs:domain phys:MachineComponent ;
                      rdfs:range phys:MachineTool ;
                      rdfs:label "uses machine tool"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/belongsToProcess
 pros-seg:belongsToProcess rdf:type owl:ObjectProperty ;
                           rdfs:domain pros-seg:ProcessSegment ;
                           rdfs:range pros-seg:Process ;
@@ -302,7 +302,7 @@ pros-seg:belongsToProcess rdf:type owl:ObjectProperty ;
                                      "belongs to process"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
 pros-seg:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
                                   rdfs:domain pros-seg:Process ;
                                   rdfs:range pros-seg:ProcessSegment ;
@@ -310,35 +310,35 @@ pros-seg:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
                                              "consists of process segment"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/assembledFromMaterial
 prod:assembledFromMaterial rdf:type owl:ObjectProperty ;
                            rdfs:domain prod:Material ;
                            rdfs:range prod:Material ;
                            rdfs:label "assembled from material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/assembledFromProcessedPart
 prod:assembledFromProcessedPart rdf:type owl:ObjectProperty ;
                                 rdfs:domain prod:ProcessedPart ;
                                 rdfs:range prod:ProcessedPart ;
                                 rdfs:label "assembled from processed part" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/machinedFromMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/machinedFromMaterial
 prod:machinedFromMaterial rdf:type owl:ObjectProperty ;
                           rdfs:domain prod:Product ;
                           rdfs:range prod:RawMaterial ;
                           rdfs:label "machined From Material"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/relatesToMaterial
 prod:relatesToMaterial rdf:type owl:ObjectProperty ;
                        rdfs:domain prod:ProcessedPart ;
                        rdfs:range prod:Material ;
                        rdfs:label "relates to material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
 prod-seg:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
                                    rdfs:domain prod-seg:ProductSegment ;
                                    rdfs:range prod-seg:EquipmentSpecification ;
@@ -347,7 +347,7 @@ prod-seg:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
                                               "has Equipment Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasMaterialSpecification
 prod-seg:hasMaterialSpecification rdf:type owl:ObjectProperty ;
                                   rdfs:domain prod-seg:ProductSegment ;
                                   rdfs:range prod-seg:MaterialSpecification ;
@@ -356,7 +356,7 @@ prod-seg:hasMaterialSpecification rdf:type owl:ObjectProperty ;
                                              "has Material Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasSegmentResult
 prod-seg:hasSegmentResult rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range prod-seg:SegmentResult ;
@@ -365,7 +365,7 @@ prod-seg:hasSegmentResult rdf:type owl:ObjectProperty ;
                                      "has Segment Result"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/isFollowedBy
 prod-seg:isFollowedBy rdf:type owl:ObjectProperty ;
                       rdfs:domain prod-seg:ProductSegment ;
                       rdfs:range prod-seg:ProductSegment ;
@@ -378,7 +378,7 @@ prod-seg:isFollowedBy rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramDataType
 param:paramDataType rdf:type owl:DatatypeProperty ;
                     rdfs:domain param:Parameter ;
                     rdfs:comment "Defines the data type of a parameter. Valid ranges are all xsd data types"@en ;
@@ -386,7 +386,7 @@ param:paramDataType rdf:type owl:DatatypeProperty ;
                                "param datatype"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramMaxTolerance
 param:paramMaxTolerance rdf:type owl:DatatypeProperty ;
                         rdfs:domain param:Parameter ;
                         rdfs:comment "Defines the upper tolerance limit of a parameter."@en ;
@@ -394,7 +394,7 @@ param:paramMaxTolerance rdf:type owl:DatatypeProperty ;
                                    "parameter max tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramMinTolerance
 param:paramMinTolerance rdf:type owl:DatatypeProperty ;
                         rdfs:domain param:Parameter ;
                         rdfs:comment "Defines the lower tolerance limit of a parameter."@en ;
@@ -402,7 +402,7 @@ param:paramMinTolerance rdf:type owl:DatatypeProperty ;
                                    "parameter min tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramValue
 param:paramValue rdf:type owl:DatatypeProperty ;
                  rdfs:domain param:ParameterValue ;
                  rdfs:comment "Defines the value of a parameter."@en ;
@@ -410,14 +410,14 @@ param:paramValue rdf:type owl:DatatypeProperty ;
                             "parameter value"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/hasProductName
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/hasProductName
 prod:hasProductName rdf:type owl:DatatypeProperty ;
                                                                                 rdfs:domain prod:Product ;
                                                                                 rdfs:range xsd:string ;
                                                                                 rdfs:label "has Product Name"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/hasRawMaterialtName
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/ProductInstance/hasRawMaterialtName
 prod:hasRawMaterialName rdf:type owl:DatatypeProperty ;
                                                                                              rdfs:domain prod:RawMaterial ;
                                                                                              rdfs:range xsd:string ;
@@ -432,7 +432,7 @@ prod:hasRawMaterialName rdf:type owl:DatatypeProperty ;
 qu:Unit rdf:type owl:Class .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Equipment
 eqm:Equipment rdf:type owl:Class ;
               rdfs:comment """Generalization for all logical elements required to organize or model your manufacturing hierarchy, sequence or flow.
 
@@ -444,7 +444,7 @@ Reference: IEC 62264-1, IEC 62264-2"""@en ;
               rdfs:label "Equipment"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Line
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Line
 eqm:Line rdf:type owl:Class ;
          rdfs:subClassOf eqm:WorkCenter ;
          rdfs:comment """Collection of one or more sequentially ordered work units that work together to perform a defined sequence of production processes to manufacture or assemble a product that can be a final or a semi-finished product. 
@@ -452,14 +452,14 @@ A line is a subclass of a work center."""@en ;
          rdfs:label "Line"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Plant
 eqm:Plant rdf:type owl:Class ;
           rdfs:subClassOf eqm:Equipment ;
           rdfs:comment "Complex and separate organizational structure set up. It is a logical grouping of a manufacturing entity. It contains other equipment such as work centers or work units. Plants may be part of business-oriented entities such as product lines, divisions, sales segments and so on."@en ;
           rdfs:label "Plant"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Pool
 eqm:Pool rdf:type owl:Class ;
          rdfs:subClassOf eqm:WorkCenter ;
          rdfs:comment """Grouping of several parallel work units running the same process or sharing similar capabilities. 
@@ -467,7 +467,7 @@ A pool is a subclass of a work center."""@en ;
          rdfs:label "Pool"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Station
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Station
 eqm:Station rdf:type owl:Class ;
             rdfs:subClassOf eqm:WorkUnit ;
             rdfs:comment """A logical grouping of equipment intended to produce a good. Stations are often are linked to a manufacturing process for a semi-finished or finished part. Subclass of a work unit. Stations belong to a line. A line can consist of 1..n stations.
@@ -478,7 +478,7 @@ Note 1: Assets or parts within an Asset represent a station well. Station can be
             rdfs:label "Station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell
 eqm:WorkCell rdf:type owl:Class ;
              rdfs:subClassOf eqm:WorkUnit ;
              rdfs:comment """Logical sub groupings of stations. A station can consist of 1..n work cells. Subclass of a work unit.
@@ -487,7 +487,7 @@ Work cells are intended to implement a process segment. Usually, the mapping bet
              rdfs:label "Work Cell"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCenter
 eqm:WorkCenter rdf:type owl:Class ;
                rdfs:subClassOf eqm:Equipment ;
                rdfs:comment """Grouping of one or more work units or smaller work centers that are logically or geographically linked. Line and Pool are sub-classes of work centers. A work centers can consist of 1..n work centers (e.g., a pool is part of a line). 
@@ -495,7 +495,7 @@ This term does not refer to SAP work center. It is possible but not recommended 
                rdfs:label "Work Center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkUnit
 eqm:WorkUnit rdf:type owl:Class ;
              rdfs:subClassOf eqm:Equipment ;
              rdfs:comment """Logical grouping of equipment at the level below a work center. A work unit can consist of smaller work units. A work unit logically represents the location of executing a manufacturing process and can be linked to a machine or machine component which physically executes the manufacturing process.
@@ -504,21 +504,21 @@ Reference: IEC 62264-1 ID:3.1.26"""@en ;
              rdfs:label "Work Unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/Parameter
 param:Parameter rdf:type owl:Class ;
                 rdfs:comment "An individually measured item or property of a process segment or product segment. Parameters belong to a Parameter Specification."@en ;
                 rdfs:label "Parameter" ,
                            "Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification
 param:ParameterSpecification rdf:type owl:Class ;
                              rdfs:comment "Specifies the setting parameters and/or result parameters for a process segment or product segment. A parameter specification consists of 1..n parameters."@en ;
                              rdfs:label "Parameter Specification" ,
                                         "Parameter Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue
 param:ParameterValue rdf:type owl:Class ;
                      rdfs:comment """Concrete value of a parameter.
 Note 1: For example, the parameter value of the parameter “Temperature” might be “18.5”."""@en ;
@@ -526,7 +526,7 @@ Note 1: For example, the parameter value of the parameter “Temperature” migh
                                 "Parameter Value"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ResultParameter
 param:ResultParameter rdf:type owl:Class ;
                       rdfs:subClassOf param:Parameter ;
                       rdfs:comment "Description of the result parameters of a given process or product segment. Result parameters can also contain tolerance values. Subclass of Parameter"@en ;
@@ -534,7 +534,7 @@ param:ResultParameter rdf:type owl:Class ;
                                  "Result Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter
 param:SettingParameter rdf:type owl:Class ;
                        rdfs:subClassOf param:Parameter ;
                        rdfs:comment """Description of input / setting parameters of a given process or product segment. Subclass of Parameter.
@@ -543,7 +543,7 @@ Note 1: Setting parameters can also contain tolerance values."""@en ;
                                   "Setting Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Asset
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Asset
 phys:Asset rdf:type owl:Class ;
            rdfs:comment """Physical asset that covers primarily machines and tools but excludes buildings.  
 
@@ -557,19 +557,19 @@ Reference: IEC 62264-1 ID:3.1.36, Industrie 4.0 – Terms, VDI status report Ind
            rdfs:label "Asset"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Building
 phys:Building rdf:type owl:Class ;
               rdfs:comment "Independently usable, roofed structural works in a property. They represent a sheltered area to provide space for manufacturing assets, people and systems to perform value added activities."@en ;
               rdfs:label "Building"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Level
 phys:Level rdf:type owl:Class ;
            rdfs:comment "Sub-structure of a building and is synonym to the word building floor."@en ;
            rdfs:label "Level"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Location
 phys:Location rdf:type owl:Class ;
               rdfs:comment """Collection of open spaces and one or more buildings on defined properties (e.g., geo fenced).
 A spatial region or named place.""" ;
@@ -577,27 +577,27 @@ A spatial region or named place.""" ;
               rdfs:label "Location"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine
 phys:Machine rdf:type owl:Class ;
              rdfs:subClassOf phys:Asset ;
              rdfs:comment "A specific asset (production) subclass used in manufacturing or assembly to produce tangible goods."@en ;
              rdfs:label "Machine"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineComponent
 phys:MachineComponent rdf:type owl:Class ;
                       rdfs:comment "A part of a machine which itself may be composed of sub components."@en ;
                       rdfs:label "Machine Component"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineTool
 phys:MachineTool rdf:type owl:Class ;
                  rdfs:comment """A device used in a machine for manufacturing or assembly.  
 Note 1: For example, a drilling tool is used in a drilling machine to drill holes into the product."""@en ;
                  rdfs:label "Machine Tool"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/Process
 pros-seg:Process rdf:type owl:Class ;
                  rdfs:comment """Description of a manufacturing process. A manufacturing process may
 consist of 1..n process segments"""^^xsd:string ;
@@ -605,7 +605,7 @@ consist of 1..n process segments"""^^xsd:string ;
                             "Process"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/ProcessSegment
 pros-seg:ProcessSegment rdf:type owl:Class ;
                         rdfs:comment """Smallest elements of manufacturing activities that are visible to
 business processes. Multiple process segments together form a process
@@ -614,7 +614,7 @@ business processes. Multiple process segments together form a process
                                    "Process Segment"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Assembly
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Assembly
 prod:Assembly rdf:type owl:Class ;
               rdfs:subClassOf prod:SemiFinishedProduct ;
               rdfs:comment """Description of a tangible good that is the outcome of a previous assembly process. Subclass of material. This includes especially the outcomes of other internal suppliers (e.g., plant A delivering an assembly to plant B). 
@@ -622,7 +622,7 @@ Note 1: It is a perspective of the one who uses it to build a more complex mater
               rdfs:label "Assembly" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Component
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Component
 prod:Component rdf:type owl:Class ;
                rdfs:subClassOf prod:SemiFinishedProduct ;
                rdfs:comment """Description of a tangible good that is input to an assembly process and is typically purchased from a supplier in a “ready for use” form. Subclass of material.
@@ -631,7 +631,7 @@ Note 2: It is a perspective of the one who uses it to build a more complex mater
                rdfs:label "Component" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Material
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Material
 prod:Material rdf:type owl:Class ;
               rdfs:comment """Abstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. 
 Note 1: The term has been purposely selected to create an umbrella for a broad spectrum of possible examples, anAbstraction of a tangible result of some manufacturing or assembly process. A product, semi-finished product, sub-assembly, component, or raw material. 
@@ -639,13 +639,13 @@ Note 2: Subclasses like product, semi-finished product and raw material allow fo
               rdfs:label "Material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/ProcessedPart
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/ProcessedPart
 prod:ProcessedPart rdf:type owl:Class ;
                    rdfs:comment "Description of a unique example/occurrence of a specific material. As such it can be an instantiation of any of the material subclasses. A processed part refers to material it represents via the “relatesToMaterial” relationship." ;
                    rdfs:label "Processed Part" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product
 prod:Product rdf:type owl:Class ;
              rdfs:subClassOf prod:Material ;
              rdfs:comment """Description of a tangible good that is manufactured or assembled and considered ready for being sold to a customer afterwards. Subclass of material.
@@ -653,14 +653,14 @@ Note 1: Product is a perspective of the one who makes it ready for selling.""" ;
              rdfs:label "Product" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/ProductInstance
 prod:ProductInstance rdf:type owl:Class ;
                      rdfs:subClassOf prod:ProcessedPart ;
                      rdfs:comment "Concrete and unique example/occurrence of a product (definition) which is the outcome of manufacturing or assembly. A Product Instance refers to its product (definition) via the “relatesToMaterial” relationship inherited from ProcessedPart." ;
                      rdfs:label "Product Instance" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/RawMaterial
 prod:RawMaterial rdf:type owl:Class ;
                  rdfs:subClassOf prod:Material ;
                  rdfs:comment """Description of a tangible substrate of a specific manufacturing process that is taken in its basic form as input for subsequent manufacturing. It shall not generally be used in the context of tangible input into assembly process. Subclass of material.
@@ -668,7 +668,7 @@ prod:RawMaterial rdf:type owl:Class ;
                  rdfs:label "Raw Material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/SemiFinishedProduct
 prod:SemiFinishedProduct rdf:type owl:Class ;
                          rdfs:subClassOf prod:Material ;
                          rdfs:comment """Description of a tangible good that is not yet finished. Subclass of material.
@@ -676,28 +676,28 @@ Note 1: Usually, a semi-finished product is a sub-assembly or a component of ano
                          rdfs:label "Semi-Finished Product" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/EquipmentSpecification
 prod-seg:EquipmentSpecification rdf:type owl:Class ;
                                 rdfs:comment "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."@en ;
                                 rdfs:label "Equipment Specification" ,
                                            "Equipment Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/MaterialSpecification
 prod-seg:MaterialSpecification rdf:type owl:Class ;
                                rdfs:comment "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."@en ;
                                rdfs:label "Material Specification" ,
                                           "Material Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/ProductSegment
 prod-seg:ProductSegment rdf:type owl:Class ;
                         rdfs:comment "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."@en ;
                         rdfs:label "Product Segment" ,
                                    "Product Segment"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/SegmentResult
 prod-seg:SegmentResult rdf:type owl:Class ;
                        rdfs:comment "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."@en ;
                        rdfs:label "Segment Result" ,
@@ -713,156 +713,156 @@ prod-seg:SegmentResult rdf:type owl:Class ;
                                                           qu:Unit .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Line/Aluminium_Cast
-<https://open-manufacturing.org/ontologies/I4.0/Equipment/Line/Aluminium_Cast> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Line/Aluminium_Cast
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Line/Aluminium_Cast> rdf:type owl:NamedIndividual ,
                                                                                         eqm:Line .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant/Plant_2
-<https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant/Plant_2> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Plant/Plant_2
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Plant/Plant_2> rdf:type owl:NamedIndividual ,
                                                                                   eqm:Plant .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Station/Housing_10
-<https://open-manufacturing.org/ontologies/I4.0/Equipment/Station/Housing_10> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Station/Housing_10
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Station/Housing_10> rdf:type owl:NamedIndividual ,
                                                                                        eqm:Station .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell/10.1
-<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell/10.1> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell/10.1
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell/10.1> rdf:type owl:NamedIndividual ,
                                                                                   eqm:WorkCell .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell/10.2
-<https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell/10.2> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell/10.2
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell/10.2> rdf:type owl:NamedIndividual ,
                                                                                   eqm:WorkCell .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/Hole_diameter_8mm
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/Hole_diameter_8mm> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/Hole_diameter_8mm
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/Hole_diameter_8mm> rdf:type owl:NamedIndividual ,
                                                                                                              param:ParameterSpecification .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/Holes_Length_12mm
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/Holes_Length_12mm> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/Holes_Length_12mm
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/Holes_Length_12mm> rdf:type owl:NamedIndividual ,
                                                                                                              param:ParameterSpecification .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/ShaftDrillParameter1
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/ShaftDrillParameter1> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/ShaftDrillParameter1
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/ShaftDrillParameter1> rdf:type owl:NamedIndividual ,
                                                                                                                 param:ParameterSpecification ;
-                                                                                                       param:hasParameter <https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> .
+                                                                                                       param:hasParameter <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/ShaftMeasureParameter1
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification/ShaftMeasureParameter1> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/ShaftMeasureParameter1
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification/ShaftMeasureParameter1> rdf:type owl:NamedIndividual ,
                                                                                                                   param:ParameterSpecification .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/Hole_diameter_7.95mm
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/Hole_diameter_7.95mm> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/Hole_diameter_7.95mm
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/Hole_diameter_7.95mm> rdf:type owl:NamedIndividual ,
                                                                                                         param:ParameterValue .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/Holes_length_12.05mm
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/Holes_length_12.05mm> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/Holes_length_12.05mm
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/Holes_length_12.05mm> rdf:type owl:NamedIndividual ,
                                                                                                         param:ParameterValue .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/600
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue/600> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/600
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue/600> rdf:type owl:NamedIndividual ,
                                                                                        param:ParameterValue ;
-                                                                              param:isValueOf <https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> .
+                                                                              param:isValueOf <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed
-<https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter/Rotation_Speed> rdf:type owl:NamedIndividual ,
                                                                                                     param:SettingParameter .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building/Building_101
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Building/Building_101> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Building/Building_101
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Building/Building_101> rdf:type owl:NamedIndividual ,
                                                                                               phys:Building .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level/Floor_2
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Level/Floor_2> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Level/Floor_2
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Level/Floor_2> rdf:type owl:NamedIndividual ,
                                                                                       phys:Level .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location/Friedrichshafen
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Location/Friedrichshafen> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Location/Friedrichshafen
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Location/Friedrichshafen> rdf:type owl:NamedIndividual ,
                                                                                                  phys:Location .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-1
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-1> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-1
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-1> rdf:type owl:NamedIndividual ,
                                                                                                phys:Machine .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-2
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-2> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-2
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/Machine/Heller_MC_16-2> rdf:type owl:NamedIndividual ,
                                                                                                phys:Machine .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent/Z-Spindle
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineComponent/Z-Spindle> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineComponent/Z-Spindle
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineComponent/Z-Spindle> rdf:type owl:NamedIndividual ,
                                                                                                    phys:MachineComponent .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool/HSS_Drill
-<https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/MachineTool/HSS_Drill> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineTool/HSS_Drill
+<https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/MachineTool/HSS_Drill> rdf:type owl:NamedIndividual ,
                                                                                               phys:MachineTool .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process/Final_cut_front_side
-<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process/Final_cut_front_side> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/Process/Final_cut_front_side
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/Process/Final_cut_front_side> rdf:type owl:NamedIndividual ,
                                                                                                       pros-seg:Process .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment/Drill_shaft_holes
-<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment/Drill_shaft_holes> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/ProcessSegment/Drill_shaft_holes
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/ProcessSegment/Drill_shaft_holes> rdf:type owl:NamedIndividual ,
                                                                                                           pros-seg:ProcessSegment .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/M8_Insert_nut
-<https://open-manufacturing.org/ontologies/I4.0/Product/Product/M8_Insert_nut> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/M8_Insert_nut
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/M8_Insert_nut> rdf:type owl:NamedIndividual ,
                                                                                         prod:Product ;
-                                                                               prod:machinedFromMaterial <https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789> .
+                                                                               prod:machinedFromMaterial <https://eclipse-esmf.github.io/ontologies/I4.0/Product/RawMaterial/0505123789> .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/Machined_Housing
-<https://open-manufacturing.org/ontologies/I4.0/Product/Product/Machined_Housing> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/Machined_Housing
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/Machined_Housing> rdf:type owl:NamedIndividual ,
                                                                                            prod:Product ;
-                                                                                  prod:machinedFromMaterial <https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789> .
+                                                                                  prod:machinedFromMaterial <https://eclipse-esmf.github.io/ontologies/I4.0/Product/RawMaterial/0505123789> .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/Transmission_Housing1
-<https://open-manufacturing.org/ontologies/I4.0/Product/Product/Transmission_Housing1> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/Transmission_Housing1
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/Transmission_Housing1> rdf:type owl:NamedIndividual ,
                                                                                                 prod:Product .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/Product/1111222333
-<https://open-manufacturing.org/ontologies/I4.0/Product/Product/1111222333> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/1111222333
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/1111222333> rdf:type owl:NamedIndividual ,
                                                                                      prod:Product ;
-                                                                            prod:assembledFromMaterial <https://open-manufacturing.org/ontologies/I4.0/Product/Product/M8_Insert_nut> ,
-                                                                                                       <https://open-manufacturing.org/ontologies/I4.0/Product/Product/Machined_Housing> ;
+                                                                            prod:assembledFromMaterial <https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/M8_Insert_nut> ,
+                                                                                                       <https://eclipse-esmf.github.io/ontologies/I4.0/Product/Product/Machined_Housing> ;
                                                                             prod:hasProductName "Transmission Housing"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/1111222333_4567
-<https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance/1111222333_4567> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/ProductInstance/1111222333_4567
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/ProductInstance/1111222333_4567> rdf:type owl:NamedIndividual ,
                                                                                                   prod:ProductInstance .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789
-<https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial/0505123789> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Product/RawMaterial/0505123789
+<https://eclipse-esmf.github.io/ontologies/I4.0/Product/RawMaterial/0505123789> rdf:type owl:NamedIndividual ,
                                                                                          prod:RawMaterial ;
                                                                                 prod:hasRawMaterialName "Raw Housing"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment/Housing_front_side
-<https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment/Housing_front_side> rdf:type owl:NamedIndividual ,
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/ProductSegment/Housing_front_side
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/ProductSegment/Housing_front_side> rdf:type owl:NamedIndividual ,
                                                                                                            prod-seg:ProductSegment .
 
 

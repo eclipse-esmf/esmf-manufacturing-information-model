@@ -1,25 +1,25 @@
-@prefix core: <https://open-manufacturing.org/ontologies/I4.0/Core/> .
+@prefix core: <https://eclipse-esmf.github.io/ontologies/I4.0/Core/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix eqm: <https://open-manufacturing.org/ontologies/I4.0/Equipment/> .
+@prefix eqm: <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix phys: <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset/> .
-@prefix prod: <https://open-manufacturing.org/ontologies/I4.0/Product/> .
+@prefix phys: <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset/> .
+@prefix prod: <https://eclipse-esmf.github.io/ontologies/I4.0/Product/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix param: <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
-@prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
-@prefix pros-seg: <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/Core> .
+@prefix param: <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/> .
+@prefix prod-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/> .
+@prefix pros-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/Core> .
 
-<https://open-manufacturing.org/ontologies/I4.0/Core> rdf:type owl:Ontology ;
-                                                       owl:imports <https://open-manufacturing.org/ontologies/I4.0/Equipment> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/Parameter> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/PhysicalAsset> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/Product> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment> ,
-                                                                   <https://open-manufacturing.org/ontologies/I4.0/ProductSegment> ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/Core> rdf:type owl:Ontology ;
+                                                       owl:imports <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment> ,
+                                                                   <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter> ,
+                                                                   <https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset> ,
+                                                                   <https://eclipse-esmf.github.io/ontologies/I4.0/Product> ,
+                                                                   <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> ,
+                                                                   <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment> ;
                                                        dc:created "July 13th, 2022"@en ;
                                                        dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
                                                                   "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
@@ -37,7 +37,7 @@
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasEquipment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasEquipment
 core:hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:domain prod-seg:EquipmentSpecification ;
               rdfs:range eqm:Equipment ;
@@ -45,7 +45,7 @@ core:hasEquipment rdf:type owl:ObjectProperty ;
               rdfs:label "has equipment" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasMaterial
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasMaterial
 core:hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain prod-seg:MaterialSpecification ;
              rdfs:range prod:Material ;
@@ -53,7 +53,7 @@ core:hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:label "has material" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasParameterSpecification
 core:hasParameterSpecification rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain pros-seg:ProcessSegment ,
@@ -63,7 +63,7 @@ core:hasParameterSpecification rdf:type owl:ObjectProperty ;
                            rdfs:label "has parameter specification" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/hasParameterValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/hasParameterValue
 core:hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:domain prod-seg:SegmentResult ;
                    rdfs:range param:ParameterValue ;
@@ -71,7 +71,7 @@ core:hasParameterValue rdf:type owl:ObjectProperty ;
                    rdfs:label "has parameter value" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/implementsProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/implementsProcessSegment
 core:implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range pros-seg:ProcessSegment ;
@@ -79,7 +79,7 @@ core:implementsProcessSegment rdf:type owl:ObjectProperty ;
                           rdfs:label "implements process segment" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/isImplementedByAsset
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/isImplementedByAsset
 core:isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:domain eqm:WorkUnit ;
                       rdfs:range phys:Asset ;
@@ -87,7 +87,7 @@ core:isImplementedByAsset rdf:type owl:ObjectProperty ;
                       rdfs:label "is implemented by asset" .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Core/requiresProductSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Core/requiresProductSegment
 core:requiresProductSegment rdf:type owl:ObjectProperty ;
                         rdfs:domain prod:Product ;
                         rdfs:range prod-seg:ProductSegment ;

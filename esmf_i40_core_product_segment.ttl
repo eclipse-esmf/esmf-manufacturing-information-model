@@ -5,10 +5,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix prod-seg: <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/ProductSegment/> .
+@prefix prod-seg: <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/> .
 
-<https://open-manufacturing.org/ontologies/I4.0/ProductSegment> rdf:type owl:Ontology ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment> rdf:type owl:Ontology ;
                                                                   dc:created "June 27th, 2022"@en ;
                                                                   dc:creator "Irlan Grangel-Gonzalez, Felix Loesch"@en ,
                                                                              "https://www.linkedin.com/in/dr-felix-l%C3%B6sch-0083294b/" ,
@@ -66,7 +66,7 @@ dcterms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasEquipmentSpecification
 prod-seg:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
                                    rdfs:domain prod-seg:ProductSegment ;
                                    rdfs:range prod-seg:EquipmentSpecification ;
@@ -75,7 +75,7 @@ prod-seg:hasEquipmentSpecification rdf:type owl:ObjectProperty ;
                                               "has equipment specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasMaterialSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasMaterialSpecification
 prod-seg:hasMaterialSpecification rdf:type owl:ObjectProperty ;
                                   rdfs:domain prod-seg:ProductSegment ;
                                   rdfs:range prod-seg:MaterialSpecification ;
@@ -84,7 +84,7 @@ prod-seg:hasMaterialSpecification rdf:type owl:ObjectProperty ;
                                              "has material specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/hasSegmentResult
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/hasSegmentResult
 prod-seg:hasSegmentResult rdf:type owl:ObjectProperty ;
                           rdfs:domain prod-seg:ProductSegment ;
                           rdfs:range prod-seg:SegmentResult ;
@@ -93,7 +93,7 @@ prod-seg:hasSegmentResult rdf:type owl:ObjectProperty ;
                                      "has segment result"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/isFollowedBy
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/isFollowedBy
 prod-seg:isFollowedBy rdf:type owl:ObjectProperty ;
                       rdfs:domain prod-seg:ProductSegment ;
                       rdfs:range prod-seg:ProductSegment ;
@@ -106,28 +106,28 @@ prod-seg:isFollowedBy rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/EquipmentSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/EquipmentSpecification
 prod-seg:EquipmentSpecification rdf:type owl:Class ;
                                 rdfs:comment "Specification of the required equipment (e.g., stations, work cells) that are required to execute the product segment."@en ;
                                 rdfs:label "Equipment Specification" ,
                                            "Equipment Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/MaterialSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/MaterialSpecification
 prod-seg:MaterialSpecification rdf:type owl:Class ;
                                rdfs:comment "Specifies the material required for executing the product segment. The material specification can refer to the input material and output material of the product segment."@en ;
                                rdfs:label "Material Specification" ,
                                           "Material Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/ProductSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/ProductSegment
 prod-seg:ProductSegment rdf:type owl:Class ;
                         rdfs:comment "Implementation of a process segment for a concrete product. Thus, a product segment implements a process segment for a concrete product or product variant. A product segment identifies personnel, equipment, and material resources required of a process segment to complete a production step for a specific product. Product specific routing information between product segments can be expressed via the isFollowedBy relationship between product segments. Reference: IEC 62264-1 ID:3.1.29."@en ;
                         rdfs:label "Product Segment" ,
                                    "Product Segment"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProductSegment/SegmentResult
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment/SegmentResult
 prod-seg:SegmentResult rdf:type owl:Class ;
                        rdfs:comment "Outcome of the execution of a product segment for a given product instance or processed part (see product model). A segment result refers to the parameter values of result parameters defined by the parameter specification (see Parameter Model for details)."@en ;
                        rdfs:label "Segment Result" ,

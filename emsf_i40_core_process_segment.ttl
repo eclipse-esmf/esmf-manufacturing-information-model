@@ -5,9 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pros-seg: pros-seg: .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@base <https://open-manufacturing.org/ontologies/I4.0/ProcessSegment> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> .
 
-<https://open-manufacturing.org/ontologies/I4.0/ProcessSegment> rdf:type owl:Ontology ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment> rdf:type owl:Ontology ;
                                                                  dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                                  dc:created "June 15th, 2022"@en ;
                                                                  dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
@@ -50,7 +50,7 @@ dc:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/belongsToProcess
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/belongsToProcess
 pros-seg:belongsToProcess rdf:type owl:ObjectProperty ;
                                                                                  rdfs:domain pros-seg:ProcessSegment ;
                                                                                  rdfs:range pros-seg:Process ;
@@ -58,7 +58,7 @@ pros-seg:belongsToProcess rdf:type owl:ObjectProperty ;
                                                                                             "belongs to process"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/consistsOfProcessSegment
 pros-seg:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
                                                                                          rdfs:domain pros-seg:Process ;
                                                                                          rdfs:range pros-seg:ProcessSegment ;
@@ -70,7 +70,7 @@ pros-seg:consistsOfProcessSegment rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/Process
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/Process
 pros-seg:Process rdf:type owl:Class ;
                                                                         rdfs:comment """Description of a manufacturing process. A manufacturing process may
 consist of 1..n process segments"""^^xsd:string ;
@@ -78,7 +78,7 @@ consist of 1..n process segments"""^^xsd:string ;
                                                                                    "Process"^^xsd:string .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/ProcessSegment/ProcessSegment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment/ProcessSegment
 pros-seg:ProcessSegment rdf:type owl:Class ;
                                                                                rdfs:comment """Smallest elements of manufacturing activities that are visible to
 business processes. Multiple process segments together form a process

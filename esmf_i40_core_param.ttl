@@ -4,11 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix param: <https://open-manufacturing.org/ontologies/I4.0/Parameter/> .
+@prefix param: <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
-@base <https://open-manufacturing.org/ontologies/I4.0/Parameter> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/Parameter> .
 
-<https://open-manufacturing.org/ontologies/I4.0/Parameter> rdf:type owl:Ontology ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/Parameter> rdf:type owl:Ontology ;
                                                             dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                             dc:created "April 27th, 2022"@en ;
                                                             dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
@@ -51,7 +51,7 @@ dc:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/hasParameter
 param:hasParameter rdf:type owl:ObjectProperty ;
                    rdfs:domain param:ParameterSpecification ;
                    rdfs:range param:Parameter ;
@@ -60,7 +60,7 @@ param:hasParameter rdf:type owl:ObjectProperty ;
                               "has parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/hasUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/hasUnit
 param:hasUnit rdf:type owl:ObjectProperty ;
               rdfs:domain param:Parameter ;
               rdfs:range qu:Unit ;
@@ -69,7 +69,7 @@ param:hasUnit rdf:type owl:ObjectProperty ;
                          "has unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/isValueOf
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/isValueOf
 param:isValueOf rdf:type owl:ObjectProperty ;
                 rdfs:domain param:ParameterValue ;
                 rdfs:range param:Parameter ;
@@ -82,7 +82,7 @@ param:isValueOf rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramDataType
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramDataType
 param:paramDataType rdf:type owl:DatatypeProperty ;
                     rdfs:domain param:Parameter ;
                     rdfs:comment "Defines the data type of a parameter. Valid ranges are all xsd data types"@en ;
@@ -90,7 +90,7 @@ param:paramDataType rdf:type owl:DatatypeProperty ;
                                "param datatype"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMaxTolerance
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramMaxTolerance
 param:paramMaxTolerance rdf:type owl:DatatypeProperty ;
                         rdfs:domain param:Parameter ;
                         rdfs:comment "Defines the upper tolerance limit of a parameter."@en ;
@@ -98,7 +98,7 @@ param:paramMaxTolerance rdf:type owl:DatatypeProperty ;
                                    "parameter max tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramMinTolerance
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramMinTolerance
 param:paramMinTolerance rdf:type owl:DatatypeProperty ;
                         rdfs:domain param:Parameter ;
                         rdfs:comment "Defines the lower tolerance limit of a parameter."@en ;
@@ -106,7 +106,7 @@ param:paramMinTolerance rdf:type owl:DatatypeProperty ;
                                    "parameter min tolerance"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/paramValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/paramValue
 param:paramValue rdf:type owl:DatatypeProperty ;
                  rdfs:domain param:ParameterValue ;
                  rdfs:comment "Defines the value of a parameter."@en ;
@@ -122,21 +122,21 @@ param:paramValue rdf:type owl:DatatypeProperty ;
 qu:Unit rdf:type owl:Class .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/Parameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/Parameter
 param:Parameter rdf:type owl:Class ;
                 rdfs:comment "An individually measured item or property of a process segment or product segment. Parameters belong to a Parameter Specification."@en ;
                 rdfs:label "Parameter" ,
                            "Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterSpecification
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterSpecification
 param:ParameterSpecification rdf:type owl:Class ;
                              rdfs:comment "Specifies the setting parameters and/or result parameters for a process segment or product segment. A parameter specification consists of 1..n parameters."@en ;
                              rdfs:label "Parameter Specification" ,
                                         "Parameter Specification"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ParameterValue
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ParameterValue
 param:ParameterValue rdf:type owl:Class ;
                      rdfs:comment """Concrete value of a parameter.
 Note 1: For example, the parameter value of the parameter “Temperature” might be “18.5”."""@en ;
@@ -144,7 +144,7 @@ Note 1: For example, the parameter value of the parameter “Temperature” migh
                                 "Parameter Value"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/ResultParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/ResultParameter
 param:ResultParameter rdf:type owl:Class ;
                       rdfs:subClassOf param:Parameter ;
                       rdfs:comment "Description of the result parameters of a given process or product segment. Result parameters can also contain tolerance values. Subclass of Parameter"@en ;
@@ -152,7 +152,7 @@ param:ResultParameter rdf:type owl:Class ;
                                  "Result Parameter"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Parameter/SettingParameter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Parameter/SettingParameter
 param:SettingParameter rdf:type owl:Class ;
                        rdfs:subClassOf param:Parameter ;
                        rdfs:comment """Description of input / setting parameters of a given process or product segment. Subclass of Parameter.

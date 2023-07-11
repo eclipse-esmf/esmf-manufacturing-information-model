@@ -1,13 +1,13 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix eqm: <https://open-manufacturing.org/ontologies/I4.0/Equipment/> .
+@prefix eqm: <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://open-manufacturing.org/ontologies/I4.0/Equipment> .
+@base <https://eclipse-esmf.github.io/ontologies/I4.0/Equipment> .
 
-<https://open-manufacturing.org/ontologies/I4.0/Equipment> rdf:type owl:Ontology ;
+<https://eclipse-esmf.github.io/ontologies/I4.0/Equipment> rdf:type owl:Ontology ;
                                                             dc:contributor "https://www.linkedin.com/in/ram-sashank-dinavahi-123296a0/" ;
                                                             dc:created "April 27th, 2022"@en ;
                                                             dc:creator "Piotr Janik (Intel), Denis Molin (Tera Data), Soufiane Ameziane (Tera Data)"@en ,
@@ -50,7 +50,7 @@ dc:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToLine
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToLine
 eqm:belongsToLine rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain eqm:Station ;
@@ -58,7 +58,7 @@ eqm:belongsToLine rdf:type owl:ObjectProperty ;
                   rdfs:label "belongs to line"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToPlant
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToPlant
 eqm:belongsToPlant rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain eqm:WorkCenter ;
@@ -67,7 +67,7 @@ eqm:belongsToPlant rdf:type owl:ObjectProperty ;
                    rdfs:label "belongs to plant"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToStation
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToStation
 eqm:belongsToStation rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain eqm:WorkCell ;
@@ -76,7 +76,7 @@ eqm:belongsToStation rdf:type owl:ObjectProperty ;
                      rdfs:label "belongs to station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/belongsToWorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/belongsToWorkCenter
 eqm:belongsToWorkCenter rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain eqm:WorkUnit ;
@@ -85,7 +85,7 @@ eqm:belongsToWorkCenter rdf:type owl:ObjectProperty ;
                         rdfs:label "belongs to work center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfStation
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfStation
 eqm:consistsOfStation rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain eqm:Line ;
@@ -94,7 +94,7 @@ eqm:consistsOfStation rdf:type owl:ObjectProperty ;
                       rdfs:label "consists of station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCell
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkCell
 eqm:consistsOfWorkCell rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain eqm:Station ;
@@ -103,7 +103,7 @@ eqm:consistsOfWorkCell rdf:type owl:ObjectProperty ;
                        rdfs:label "consists of work cell"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkCenter
 eqm:consistsOfWorkCenter rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain eqm:Plant ;
@@ -112,7 +112,7 @@ eqm:consistsOfWorkCenter rdf:type owl:ObjectProperty ;
                          rdfs:label "consists of work center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/consistsOfWorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/consistsOfWorkUnit
 eqm:consistsOfWorkUnit rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain eqm:WorkCenter ;
@@ -121,7 +121,7 @@ eqm:consistsOfWorkUnit rdf:type owl:ObjectProperty ;
                        rdfs:label "consists of work unit"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/madeUpOfWorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/madeUpOfWorkUnit
 eqm:madeUpOfWorkUnit rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain eqm:WorkUnit ;
@@ -134,7 +134,7 @@ eqm:madeUpOfWorkUnit rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Equipment
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Equipment
 eqm:Equipment rdf:type owl:Class ;
               rdfs:comment """Generalization for all logical elements required to organize or model your manufacturing hierarchy, sequence or flow.
 
@@ -146,7 +146,7 @@ Reference: IEC 62264-1, IEC 62264-2"""@en ;
               rdfs:label "Equipment"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Line
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Line
 eqm:Line rdf:type owl:Class ;
          rdfs:subClassOf eqm:WorkCenter ;
          rdfs:comment """Collection of one or more sequentially ordered work units that work together to perform a defined sequence of production processes to manufacture or assemble a product that can be a final or a semi-finished product. 
@@ -154,14 +154,14 @@ A line is a subclass of a work center."""@en ;
          rdfs:label "Line"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Plant
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Plant
 eqm:Plant rdf:type owl:Class ;
           rdfs:subClassOf eqm:Equipment ;
           rdfs:comment "Complex and separate organizational structure set up. It is a logical grouping of a manufacturing entity. It contains other equipment such as work centers or work units. Plants may be part of business-oriented entities such as product lines, divisions, sales segments and so on."@en ;
           rdfs:label "Plant"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Pool
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Pool
 eqm:Pool rdf:type owl:Class ;
          rdfs:subClassOf eqm:WorkCenter ;
          rdfs:comment """Grouping of several parallel work units running the same process or sharing similar capabilities. 
@@ -169,7 +169,7 @@ A pool is a subclass of a work center."""@en ;
          rdfs:label "Pool"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/Station
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/Station
 eqm:Station rdf:type owl:Class ;
             rdfs:subClassOf eqm:WorkUnit ;
             rdfs:comment """A logical grouping of equipment intended to produce a good. Stations are often are linked to a manufacturing process for a semi-finished or finished part. Subclass of a work unit. Stations belong to a line. A line can consist of 1..n stations.
@@ -180,7 +180,7 @@ Note 1: Assets or parts within an Asset represent a station well. Station can be
             rdfs:label "Station"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCell
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCell
 eqm:WorkCell rdf:type owl:Class ;
              rdfs:subClassOf eqm:WorkUnit ;
              rdfs:comment """Logical sub groupings of stations. A station can consist of 1..n work cells. Subclass of a work unit.
@@ -189,7 +189,7 @@ Work cells are intended to implement a process segment. Usually, the mapping bet
              rdfs:label "Work Cell"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkCenter
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkCenter
 eqm:WorkCenter rdf:type owl:Class ;
                rdfs:subClassOf eqm:Equipment ;
                rdfs:comment """Grouping of one or more work units or smaller work centers that are logically or geographically linked. Line and Pool are sub-classes of work centers. A work centers can consist of 1..n work centers (e.g., a pool is part of a line). 
@@ -197,7 +197,7 @@ This term does not refer to SAP work center. It is possible but not recommended 
                rdfs:label "Work Center"@en .
 
 
-###  https://open-manufacturing.org/ontologies/I4.0/Equipment/WorkUnit
+###  https://eclipse-esmf.github.io/ontologies/I4.0/Equipment/WorkUnit
 eqm:WorkUnit rdf:type owl:Class ;
              rdfs:subClassOf eqm:Equipment ;
              rdfs:comment """Logical grouping of equipment at the level below a work center. A work unit can consist of smaller work units. A work unit logically represents the location of executing a manufacturing process and can be linked to a machine or machine component which physically executes the manufacturing process.
