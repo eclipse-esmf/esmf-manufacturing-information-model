@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/Core" uri="esmf_i40_core.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/ProductSegment" uri="esmf_i40_core_product_segment.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/ProcessSegment" uri="emsf_i40_core_process_segment.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/Product" uri="esmf_i40_core_product.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/PhysicalAsset" uri="esmf_i40_core_physical_asset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/Parameter" uri="esmf_i40_core_param.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://eclipse-esmf.github.io/ontologies/I4.0/Equipment" uri="esmf_i40_core_equipment.ttl"/>
+</catalog>
