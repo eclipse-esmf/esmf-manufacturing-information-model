@@ -29,22 +29,22 @@
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromMaterial
 prod:assembledFromMaterial rdf:type owl:ObjectProperty ;
-                       rdfs:domain :Material ;
-                       rdfs:range :Material ;
+                       rdfs:domain prod:Material ;
+                       rdfs:range prod:Material ;
                        rdfs:label "assembled from material" .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/assembledFromProcessedPart
 prod:assembledFromProcessedPart rdf:type owl:ObjectProperty ;
-                            rdfs:domain :ProcessedPart ;
-                            rdfs:range :ProcessedPart ;
+                            rdfs:domain prod:ProcessedPart ;
+                            rdfs:range prod:ProcessedPart ;
                             rdfs:label "assembled from processed part" .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/relatesToMaterial
 prod:relatesToMaterial rdf:type owl:ObjectProperty ;
-                   rdfs:domain :ProcessedPart ;
-                   rdfs:range :Material ;
+                   rdfs:domain prod:ProcessedPart ;
+                   rdfs:range prod:Material ;
                    rdfs:label "relates to material" .
 
 
@@ -54,7 +54,7 @@ prod:relatesToMaterial rdf:type owl:ObjectProperty ;
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/Assembly
 prod:Assembly rdf:type owl:Class ;
-          rdfs:subClassOf :SemiFinishedProduct ;
+          rdfs:subClassOf prod:SemiFinishedProduct ;
           rdfs:comment """Description of a tangible good that is the outcome of a previous assembly process. Subclass of material. This includes especially the outcomes of other internal suppliers (e.g., plant A delivering an assembly to plant B). 
 Note 1: It is a perspective of the one who uses it to build a more complex material.""" ;
           rdfs:label "Assembly" .
@@ -62,7 +62,7 @@ Note 1: It is a perspective of the one who uses it to build a more complex mater
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/Component
 prod:Component rdf:type owl:Class ;
-           rdfs:subClassOf :SemiFinishedProduct ;
+           rdfs:subClassOf prod:SemiFinishedProduct ;
            rdfs:comment """Description of a tangible good that is input to an assembly process and is typically purchased from a supplier in a “ready for use” form. Subclass of material.
 Note 1: For example, electronic components, bolts and nuts, gear box for a car OEM. 
 Note 2: It is a perspective of the one who uses it to build a more complex material.""" ;
@@ -85,7 +85,7 @@ prod:ProcessedPart rdf:type owl:Class ;
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/Product
 prod:Product rdf:type owl:Class ;
-         rdfs:subClassOf :Material ;
+         rdfs:subClassOf prod:Material ;
          rdfs:comment """Description of a tangible good that is manufactured or assembled and considered ready for being sold to a customer afterwards. Subclass of material.
 Note 1: Product is a perspective of the one who makes it ready for selling.""" ;
          rdfs:label "Product" .
@@ -93,14 +93,14 @@ Note 1: Product is a perspective of the one who makes it ready for selling.""" ;
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/ProductInstance
 prod:ProductInstance rdf:type owl:Class ;
-                 rdfs:subClassOf :ProcessedPart ;
+                 rdfs:subClassOf prod:ProcessedPart ;
                  rdfs:comment "Concrete and unique example/occurrence of a product (definition) which is the outcome of manufacturing or assembly. A Product Instance refers to its product (definition) via the “relatesToMaterial” relationship inherited from ProcessedPart." ;
                  rdfs:label "Product Instance" .
 
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/RawMaterial
 prod:RawMaterial rdf:type owl:Class ;
-             rdfs:subClassOf :Material ;
+             rdfs:subClassOf prod:Material ;
              rdfs:comment """Description of a tangible substrate of a specific manufacturing process that is taken in its basic form as input for subsequent manufacturing. It shall not generally be used in the context of tangible input into assembly process. Subclass of material.
  Note 1: It is a perspective on the one who uses it to manufacture other goods – for example a silicon wafer is raw material for production of semi-conductor electronic devices, where by itself it is a result of complex preparation process, hence a product from perspective of its supplier.""" ;
              rdfs:label "Raw Material" .
@@ -108,7 +108,7 @@ prod:RawMaterial rdf:type owl:Class ;
 
 ###  https://open-manufacturing.org/ontologies/I4.0/Product/SemiFinishedProduct
 prod:SemiFinishedProduct rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
+                     rdfs:subClassOf prod:Material ;
                      rdfs:comment """Description of a tangible good that is not yet finished. Subclass of material.
 Note 1: Usually, a semi-finished product is a sub-assembly or a component of another more complex material and is not sold to a customer by itself.""" ;
                      rdfs:label "Semi-Finished Product" .
