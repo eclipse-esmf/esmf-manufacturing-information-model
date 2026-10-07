@@ -1,5 +1,8 @@
 # ESMF I4.0 Core Information Model
 
+> [!WARNING]
+> This repository is archived since it is not actively maintained since 2024.
+
 This repository contains the implementation of the ESMF I4.0 Core Information Model as described in
 the [whitepaper](OMP-SDS-Whitepaper_I4.0_Core_Information_Model.pdf) as a set of modularized
 ontologies.
